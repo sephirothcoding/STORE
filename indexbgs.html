@@ -29,45 +29,27 @@
             gap: 20px;
         }
         
-        .tabs {
-            text-align: center;
-            margin-bottom: 20px;
+        .left-section,
+        .right-section {
+            flex: 1;
         }
         
-        .tab {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #333;
-            color: #fff;
-            margin-right: 10px;
-            cursor: pointer;
-        }
-        
-        .tab.active {
-            background-color: #555;
-        }
-        
-        .image-item {
-            display: none;
+        .left-section .image-item,
+        .right-section .image-item {
             width: 100%;
             text-align: center;
             cursor: pointer;
             margin-bottom: 20px;
         }
         
-        .image-item img {
-            max-width: 100%;
-            max-height: 450px;
-        }
-        
-        .image-item.inner img {
+        .left-section .image-item img {
             width: 250px;
             height: 200px;
         }
         
-        .image-item.outer img {
-            width: 287.5px;
-            height: 230px;
+        .right-section .image-item img {
+            width: 350px;
+            height: 300px;
         }
         
         .modal {
@@ -116,33 +98,42 @@
         <h1>Backgrounds Store</h1>
     </header>
     <div class="container">
-        <div class="tabs">
-            <div class="tab active" onclick="showImages('innerImages')">Inner</div>
-            <div class="tab" onclick="showImages('outerImages')">Outer</div>
-        </div>
-
-        <div id="innerImages" class="image-item">
-            <div onclick="openModal('https://imgur.com/JT3B4z1.jpg')">
+        <div class="left-section">
+            <h2>Inner</h2>
+            <div class="image-item" onclick="openModal('https://imgur.com/JT3B4z1.jpg')">
                 <img src="https://imgur.com/JT3B4z1.jpg" alt="Inner Image 1">
                 <h3>Inner Image 1</h3>
                 <p>Price: 400 xats</p>
             </div>
 
-            <div onclick="openModal('https://i.imgur.com/abc123.jpg')">
+            <div class="image-item" onclick="openModal('https://i.imgur.com/abc123.jpg')">
                 <img src="https://i.imgur.com/abc123.jpg" alt="Inner Image 2">
                 <h3>Inner Image 2</h3>
                 <p>Price: 400 xats</p>
             </div>
+
+            <div class="image-item" onclick="openModal(' .jpg')">
+                <img src=" .jpg" alt="Inner Image 3">
+                <h3>Inner Image 3</h3>
+                <p>Price: 400 xats</p>
+            </div>
+
+            <div class="image-item" onclick="openModal(' .jpg')">
+                <img src=" .jpg" alt="Inner Image 4">
+                <h3>Inner Image 4</h3>
+                <p>Price: 400 xats</p>
+            </div>
         </div>
 
-        <div id="outerImages" class="image-item">
-            <div onclick="openModal('https://imgur.com/1NTDTJq.jpg')">
+        <div class="right-section">
+            <h2>Outer</h2>
+            <div class="image-item" onclick="openModal('https://imgur.com/1NTDTJq.jpg')">
                 <img src="https://imgur.com/1NTDTJq.jpg" alt="Outer Image 1">
                 <h3>Outer Image 1</h3>
                 <p>Price: 600 xats</p>
             </div>
 
-            <div onclick="openModal('https://imgur.com/1NTDTJq.jpg')">
+            <div class="image-item" onclick="openModal('https://imgur.com/1NTDTJq.jpg')">
                 <img src="https://imgur.com/1NTDTJq.jpg" alt="Outer Image 2">
                 <h3>Outer Image 2</h3>
                 <p>Price: 600 xats</p>
@@ -160,8 +151,6 @@
     <script>
         var modal = document.getElementById("myModal");
         var modalImg = document.getElementById("modalImage");
-        var tabs = document.getElementsByClassName("tab");
-        var imageItems = document.getElementsByClassName("image-item");
 
         function openModal(imageUrl) {
             modal.style.display = "block";
@@ -171,32 +160,6 @@
         function closeModal() {
             modal.style.display = "none";
         }
-
-        function showImages(tabId) {
-            for (var i = 0; i < tabs.length; i++) {
-                tabs[i].classList.remove("active");
-            }
-
-            for (var i = 0; i < imageItems.length; i++) {
-                imageItems[i].style.display = "none";
-            }
-
-            var tab = document.getElementById(tabId);
-            tab.style.display = "block";
-            tab.classList.add("active");
-        }
-
-        // Show the initial tab
-        showImages('innerImages');
-
-        // Scroll to the selected tab on page load
-        window.onload = function () {
-            var urlHash = window.location.hash;
-            if (urlHash) {
-                var tabId = urlHash.substring(1);
-                showImages(tabId);
-            }
-        };
     </script>
 </body>
 
