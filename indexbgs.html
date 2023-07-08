@@ -165,9 +165,18 @@
             tab.style.display = "block";
             tab.classList.add("active");
         }
-        
+
         // Show the initial tab
         showImages('innerImages');
+
+        // Scroll to the selected tab on page load
+        window.onload = function () {
+            var urlHash = window.location.hash;
+            if (urlHash) {
+                var tabId = urlHash.substring(1);
+                showImages(tabId);
+            }
+        };
     </script>
 </body>
 
