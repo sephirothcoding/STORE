@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PcBack Store</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f0ff;
+        }
+        
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .box {
+            width: calc(50% - 20px);
+            max-width: 450px;
+            height: auto;
+            margin: 10px;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            padding: 20px;
+        }
+        
+        .box a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        .modal-content {
+            display: block;
+            margin: 50px auto;
+            width: 80%;
+            max-width: 800px;
+            max-height: 80%;
+        }
+        
+        .modal-content img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+        
+        .close-button {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>PcBack Store</h1>
+    </header>
+    <div class="container">
+        <div class="box" onclick="window.location.href='https://www.example.com/page1'">
+            <a href="https://www.example.com/page1">
+                <img src="https://via.placeholder.com/350x300" alt="Image 1">
+            </a>
+        </div>
+        <div class="box" onclick="window.location.href='https://www.example.com/page2'">
+            <a href="https://www.example.com/page2">
+                <img src="https://via.placeholder.com/350x300" alt="Image 2">
+            </a>
+        </div>
+        <div class="box" onclick="window.location.href='https://www.example.com/page3'">
+            <a href="https://www.example.com/page3">
+                <img src="https://via.placeholder.com/350x300" alt="Image 3">
+            </a>
+        </div>
+        <div class="box" onclick="window.location.href='https://www.example.com/page4'">
+            <a href="https://www.example.com/page4">
+                <img src="https://via.placeholder.com/350x300" alt="Image 4">
+            </a>
+        </div>
+        <!-- Add more boxes here -->
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <img id="modalImage">
+        </div>
+    </div>
+
+    <script>
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("modalImage");
+
+        function openModal(imageUrl) {
+            modal.style.display = "block";
+            modalImg.src = imageUrl;
+        }
+
+        function closeModal() {
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
