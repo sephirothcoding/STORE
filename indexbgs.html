@@ -27,10 +27,27 @@
             padding: 20px;
         }
         
-        .image-item {
+        .tabs {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .tab {
             display: inline-block;
-            width: 48%;
-            padding: 10px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        
+        .tab.active {
+            background-color: #555;
+        }
+        
+        .image-item {
+            display: none;
+            width: 100%;
             text-align: center;
             cursor: pointer;
             margin-bottom: 20px;
@@ -97,25 +114,19 @@
         <h1>PcBack Store</h1>
     </header>
     <div class="container">
-        <div>
-            <button onclick="showInnerImages()">Inner</button>
-            <button onclick="showOuterImages()">Outer</button>
+        <div class="tabs">
+            <div class="tab active" onclick="showImages('innerImages')">Inner</div>
+            <div class="tab" onclick="showImages('outerImages')">Outer</div>
         </div>
-        <div id="innerImages" style="display: none;">
-            <div class="image-item inner" onclick="openModal('https://i.imgur.com/DIZyID7.jpg')">
-                <img src="https://i.imgur.com/DIZyID7.jpg" alt="Image 1">
-                <h3>Inner</h3>
-                <p>Price: 400 xats</p>
-            </div>
-            <!-- Add more inner items here -->
+        <div id="innerImages" class="image-item">
+            <img src="https://i.imgur.com/DIZyID7.jpg" alt="Inner Image">
+            <h3>Inner</h3>
+            <p>Price: 400 xats</p>
         </div>
-        <div id="outerImages">
-            <div class="image-item outer" onclick="openModal('https://i.imgur.com/DIZyID7.jpg')">
-                <img src="https://i.imgur.com/DIZyID7.jpg" alt="Image 1">
-                <h3>Outer</h3>
-                <p>Price: 400 xats</p>
-            </div>
-            <!-- Add more outer items here -->
+        <div id="outerImages" class="image-item">
+            <img src="https://i.imgur.com/DIZyID7.jpg" alt="Outer Image">
+            <h3>Outer</h3>
+            <p>Price: 400 xats</p>
         </div>
     </div>
 
@@ -129,8 +140,8 @@
     <script>
         var modal = document.getElementById("myModal");
         var modalImg = document.getElementById("modalImage");
-        var innerImages = document.getElementById("innerImages");
-        var outerImages = document.getElementById("outerImages");
+        var tabs = document.getElementsByClassName("tab");
+        var imageItems = document.getElementsByClassName("image-item");
 
         function openModal(imageUrl) {
             modal.style.display = "block";
@@ -141,15 +152,22 @@
             modal.style.display = "none";
         }
 
-        function showInnerImages() {
-            innerImages.style.display = "block";
-            outerImages.style.display = "none";
-        }
+        function showImages(tabId) {
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].classList.remove("active");
+            }
 
-        function showOuterImages() {
-            innerImages.style.display = "none";
-            outerImages.style.display = "block";
+            for (var i = 0; i < imageItems.length; i++) {
+                imageItems[i].style.display = "none";
+            }
+
+            var tab = document.getElementById(tabId);
+            tab.style.display = "block";
+            tab.classList.add("active");
         }
+        
+        // Show the initial tab
+        showImages('innerImages');
     </script>
 </body>
 
