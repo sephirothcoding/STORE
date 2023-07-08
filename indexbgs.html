@@ -97,45 +97,26 @@
         <h1>PcBack Store</h1>
     </header>
     <div class="container">
-        <div class="image-item" onclick="openModal('https://i.imgur.com/DIZyID7.jpg')">
-            <img src="https://i.imgur.com/DIZyID7.jpg" alt="Image 1">
-            <h3>Graphics</h3>
-            <p>Price: 400 xats</p>
+        <div>
+            <button onclick="showInnerImages()">Inner</button>
+            <button onclick="showOuterImages()">Outer</button>
         </div>
-        <!-- Add more items here -->
-        <div class="image-item inner" onclick="openModal('https://i.imgur.com/DIZyID7.jpg')">
-            <img src="https://i.imgur.com/DIZyID7.jpg" alt="Image 1">
-            <h3>Inner</h3>
-            <p>Price: 400 xats</p>
+        <div id="innerImages" style="display: none;">
+            <div class="image-item inner" onclick="openModal('https://i.imgur.com/DIZyID7.jpg')">
+                <img src="https://i.imgur.com/DIZyID7.jpg" alt="Image 1">
+                <h3>Inner</h3>
+                <p>Price: 400 xats</p>
+            </div>
+            <!-- Add more inner items here -->
         </div>
-
-           <div class="image-item" onclick="openModal('https://i.imgur.com/DIZyID7.jpg')">
-            <img src="https://i.imgur.com/DIZyID7.jpg" alt="Image 1">
-            <h3>Graphics</h3>
-            <p>Price: 400 xats</p>
+        <div id="outerImages">
+            <div class="image-item outer" onclick="openModal('https://i.imgur.com/DIZyID7.jpg')">
+                <img src="https://i.imgur.com/DIZyID7.jpg" alt="Image 1">
+                <h3>Outer</h3>
+                <p>Price: 400 xats</p>
+            </div>
+            <!-- Add more outer items here -->
         </div>
-        <!-- Add more items here -->
-        <div class="image-item inner" onclick="openModal('https://i.imgur.com/DIZyID7.jpg')">
-            <img src="https://i.imgur.com/DIZyID7.jpg" alt="Image 1">
-            <h3>Inner</h3>
-            <p>Price: 400 xats</p>
-        </div>
-
-
-           <div class="image-item" onclick="openModal('https://i.imgur.com/DIZyID7.jpg')">
-            <img src="https://i.imgur.com/DIZyID7.jpg" alt="Image 1">
-            <h3>Graphics</h3>
-            <p>Price: 400 xats</p>
-        </div>
-        <!-- Add more items here -->
-        <div class="image-item inner" onclick="openModal('https://i.imgur.com/DIZyID7.jpg')">
-            <img src="https://i.imgur.com/DIZyID7.jpg" alt="Image 1">
-            <h3>Inner</h3>
-            <p>Price: 400 xats</p>
-        </div>
-
-        
-       
     </div>
 
     <div id="myModal" class="modal">
@@ -148,6 +129,8 @@
     <script>
         var modal = document.getElementById("myModal");
         var modalImg = document.getElementById("modalImage");
+        var innerImages = document.getElementById("innerImages");
+        var outerImages = document.getElementById("outerImages");
 
         function openModal(imageUrl) {
             modal.style.display = "block";
@@ -156,6 +139,16 @@
 
         function closeModal() {
             modal.style.display = "none";
+        }
+
+        function showInnerImages() {
+            innerImages.style.display = "block";
+            outerImages.style.display = "none";
+        }
+
+        function showOuterImages() {
+            innerImages.style.display = "none";
+            outerImages.style.display = "block";
         }
     </script>
 </body>
