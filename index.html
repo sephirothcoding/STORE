@@ -1,479 +1,735 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
   <meta charset="UTF-8">
   <title>Sephiroth's Gallery</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  
+ <script src="vectro.js"></script>
+<style>
 
-    body {
-      background-color: #18215b;
-      font-family: 'Roboto', sans-serif;
-      font-size: 16px;
-      color: #333;
-    }
+  @media only screen and (max-width: 600px) {
+  /* Mobile-specific styles go here */
+.content h2 {
+    font-size: 16px;
+  }
 
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      font-family: 'Raleway', sans-serif;
-      font-weight: bold;
-    }
+  .box,
+  .box2 {
+    padding: 10px;
+  }
 
-    .background-img {
-      height: 400px;
-      width: 100%;
-      background-repeat: no-repeat;
-      background-size: cover;
-      margin: 5% auto;
-      padding: 20px;
-      border: 1px solid #ffffff;
-      border-radius: 4px;
-      box-shadow: 0px 0px 5px #bec3e3;
-      position: relative;
-    }
+  .container {
+    padding: 10px;
+  }
 
-    .box {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 325px;
-      height: 325px;
-      background: #1071dda6;
-      box-sizing: border-box;
-      overflow: hidden;
-      box-shadow: 0 20px 50px rgb(119 130 202);
-      border: 2px solid #ffffff;
-      color: white;
-      padding: 20px;
-    }
+  .background-img {
+    height: 300px;
+    width: 90%;
+    margin: 10% auto;
+  }
 
-    .box2 {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 325px;
-      height: 325px;
-      background: #204b7ca6;
-      box-sizing: border-box;
-      overflow: hidden;
-      box-shadow: 0 20px 50px rgb(119 130 202);
-      border: 2px solid #ffffff;
-      color: white;
-      padding: 20px;
-    }
+  .box,
+  .box2 {
+    width: 250px;
+    height: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+  }  
+    
+}
 
-    .box .content,
-    .box2 .content2 {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: #ffffffa6;
-      box-sizing: border-box;
-      overflow: hidden;
-      box-shadow: 0 20px 50px rgb(23, 32, 90);
-      border: 2px solid #2a3cad;
-      color: white;
-      padding: 20px;
-    }
+*{
+  margin:0;
+  padding:0;
+}
 
-    .box:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.1);
-      transition: 0.5s;
-      pointer-events: none;
-    }
+.container{  padding-top: 20px;
+  padding-bottom: 20px;}
+body{
+  background-color: #18215b;
+}
 
-    .box:hover:before {
-      left: -50%;
-      transform: skewX(-5deg);
-    }
+.background-img{
+  
+height: 400px;
+  width: 800px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 5% auto;
+  padding:20px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  box-shadow: 0px 0px 5px #bec3e3;
+  position: relative;
+}
 
-    .box span,
-    .box2 span {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: block;
-      box-sizing: border-box;
-    }
+.content h2{ font-size:19px;}
 
-    .box span:nth-child(1),
-    .box2 span:nth-child(1) {
-      transform: rotate(0deg);
-    }
+.box{
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  width: 325px;
+  height: 325px;
+  background: #1071dda6;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgb(119 130 202);
+  border: 2px solid #ffffff;
+  color: white;
+  padding: 20px;
+}
 
-    .box span:nth-child(2),
-    .box2 span:nth-child(2) {
-      transform: rotate(90deg);
-    }
+.box2{
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  width: 325px;
+  height: 325px;
+  background: #204b7ca6;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgb(119 130 202);
+  border: 2px solid #ffffff;
+  color: white;
+  padding: 20px;
+}
 
-    .box span:nth-child(3),
-    .box2 span:nth-child(3) {
-      transform: rotate(180deg);
-    }
 
-    .box span:nth-child(4),
-    .box2 span:nth-child(4) {
-      transform: rotate(270deg);
-    }
+.box .content2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  background: #ffffffa6;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgb(23, 32, 90);
+  border: 2px solid #2a3cad;
+  color: white;
+  padding: 20px;
+}
 
-    .box span:before,
-    .box2 span:before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      background: #ffffff;
-      animation: animate 4s linear infinite;
-    }
 
-    @keyframes animate {
-      0% {
-        transform: scaleX(0);
-        transform-origin: left;
-      }
-      50% {
-        transform: scaleX(1);
-        transform-origin: left;
-      }
-      50.1% {
-        transform: scaleX(1);
-        transform-origin: right;
-      }
-      100% {
-        transform: scaleX(0);
-        transform-origin: right;
-      }
-    }
+.box:before{
+  content: '';
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background: rgba(255,255,255,0.1);
+  transition:0.5s;
+  pointer-events: none;
+}
 
-    .chrome {
-      position: relative;
-      text-align: center;
-      background-image: -webkit-linear-gradient(#74848d 0%, #B6E8F1 46%, #ffffff 50%, #32120E 54%, #4c639d 58%, #59bdc4 90%, #3c7dc1 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -webkit-text-stroke: 4px #f5f5f5;
-      font-size: 130px;
-      font-family: 'Titillium Web', sans-serif;
-      font-style: italic;
-      margin: 0;
-      line-height: 1;
-    }
+.box:hover:before{
+  left:-50%;
+  transform: skewX(-5deg);
+}
 
-    .chrome:before {
-      content: 'Sephiroth';
-      position: absolute;
-      center: 0;
-      top: 0;
-      z-index: 10;
-      background-image: -webkit-linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%);
-      background-position: -680px 0;
-      -webkit-background-clip: text;
-      -webkit-text-stroke: 0;
-      padding-right: 300px;
-      -webkit-animation-name: chrome_effect;
-      -webkit-animation-duration: 6s;
-      -webkit-animation-delay: 2s;
-      -webkit-animation-timing-function: linear;
-      -webkit-animation-iteration-count: infinite;
-    }
 
-    @-webkit-keyframes chrome_effect {
-      0% {
-        background-position: -680px 0;
-      }
-      10% {
-        background-position: 420px 0;
-      }
-      100% {
-        background-position: 420px 0;
-      }
-    }
+.box .content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  background: #ffffffa6;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgb(23, 32, 90);
+  border: 2px solid #2a3cad;
+  color: white;
+  padding: 20px;
+}
+}
 
-    @keyframes jiggle {
-      0% {
-        transform: rotate(0deg) translateY(0px);
-      }
-      50% {
-        transform: rotate(13deg) translateY(5px);
-      }
-    }
+.box span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  box-sizing: border-box;
+  
+}
 
-    h1 {
-      display: inline-block;
-      text-align: center;
-      color: blue;
-      letter-spacing: 2px;
-      font-weight: bold;
-      font-size: 40px;
-      border: 3px solid blue;
-      border-right: none;
-      border-left: none;
-      transition: 0.8s ease;
-    }
+.box span:nth-child(1)
+{
+  transform:rotate(0deg);
+}
 
-    h1:hover {
-      transform: scale(1.5) rotate(-5deg);
-    }
+.box span:nth-child(2)
+{
+  transform:rotate(90deg);
+}
 
-    h1 span:nth-child(1) {
-```html
-      animation: .3s ease-in-out infinite forwards jiggle;
-    }
+.box span:nth-child(3)
+{
+  transform:rotate(180deg);
+}
 
-    h1 span:nth-child(2) {
-      animation: .3s 0.1s ease-in-out infinite forwards jiggle;
-    }
+.box span:nth-child(4)
+{
+  transform:rotate(270deg);
+}
 
-    h1 span:nth-child(3) {
-      animation: .3s 0.2s ease-in-out infinite forwards jiggle;
-    }
+.box span:before
+{
+  content: '';
+  position: absolute;
+  width:100%;
+  height: 2px;
+  background: #ffffff;
+  animation: animate 4s linear infinite;
+}
 
-    h1 span:nth-child(4) {
-      animation: .3s 0.3s ease-in-out infinite forwards jiggle;
-    }
+@keyframes animate {
+  0% {
+  transform:scaleX(0);
+  transform-origin: left;
+  }
+  50%
+  {
+    transform:scaleX(1);
+  transform-origin: left;
+  }
+  50.1%
+  {
+    transform:scaleX(1);
+  transform-origin: right;
+    
+  }
+  
+  100%
+  {
+    transform:scaleX(0);
+  transform-origin: right;
+    
+  }
+  
+  
+} 
 
-    h1 span:nth-child(5) {
-      animation: .5s 0.4s ease-in-out infinite forwards jiggle;
-    }
 
-    h1 span:nth-child(6) {
-      animation: .3s 0.5s ease-in-out infinite forwards jiggle;
-    }
+@import url(https://fonts.googleapis.com/css?family=Mr+Dafoe);
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:900);
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+@import url(https://fonts.googleapis.com/css?family=Candal);
 
-    h1 span:nth-child(7) {
-      animation: .3s 0.6s ease-in-out infinite forwards jiggle;
-    }
+@import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
 
-    .links {
-      display: flex;
-      justify-content: center;
-      margin-top: 40px;
-    }
+@import url(https://fonts.googleapis.com/css?family=Monoton);
 
-    .links a {
-      position: relative;
-      display: inline-block;
-      padding: 25px 30px;
-      margin: 0 10px;
-      color: white;
-      font-size: 25px;
-      text-decoration: none;
-      text-transform: uppercase;
-      transition: 0.5s;
-      letter-spacing: 4px;
-      overflow: hidden;
-      margin-right: 50px;
-    }
 
-    .links a:hover {
-      background: #204b7ca6;
-      color: #204b7ca6;
-      box-shadow: 0 0 5px #98d9f5, 0 0 25px #98d9f5, 0 0 50px #98d9f5, 0 0 200px #98d9f5;
-      -webkit-box-reflect: below 1px linear-gradient(transparent, #ffffff);
-    }
+body { 
+  background: #204b7ca6;
+  background-size: cover;
+  background-repeat: no-repeat; 
+  color: #fff; 
+  position: relative;
+  margin:0 auto;
+}
 
-    .links a span {
-      position: absolute;
-      display: block;
-    }
+.chrome {
+  position: relative;
+  text-align: center; 
+background-image: -webkit-linear-gradient(#74848d 0%, #B6E8F1 46%, #ffffff 50%, #32120E 54%, #4c639d 58%, #59bdc4 90%, #3c7dc1 100%);
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 4px #f5f5f5;
+  font-size: 130px;
+  font-family: 'Titillium Web', sans-serif;
+  font-style: italic;
+  margin: 0;
+  line-height: 1;
+}
 
-    .links a span:nth-child(1) {
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, #ffffff);
-      animation: animate1 1s linear infinite;
-    }
 
-    @keyframes animate1 {
-      0% {
+
+.chrome:before {
+  content: 'Sephiroth';
+  position: absolute;
+ center: 0;
+  top: 0;
+  z-index: 10;
+  background-image: -webkit-linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%);
+  background-position:-680px 0;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 0;
+  padding-right: 300px;
+  -webkit-animation-name: chrome_effect;
+  -webkit-animation-duration: 6s;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+
+
+
+@-webkit-keyframes chrome_effect {
+  0% {background-position:-680px 0;}
+  10% {background-position:420px 0;}
+  100% {background-position:420px 0;}
+}
+
+@-webkit-keyframes cop_before_effect {
+  0% {
+    left: 51px;
+    top: 74px;
+    opacity: 0;}
+  
+  15% {
+    left: 51px;
+    top: 74px;
+    opacity: 1;}
+  
+  30% {
+    left: 51px;
+    top: 74px;
+    opacity: 0;}
+  
+  35% {
+    left: 370px;
+    top: 45px;
+    opacity: 0;}
+   
+  50% {
+    left: 370px;
+    top: 45px;
+    opacity: 1;}
+  
+  65% {
+    left: 370px;
+    top: 45px;
+    opacity: 0;}
+  
+  70% {
+    left: 564px;
+    top: 74px;
+    opacity: 0;}
+   
+  85% {
+    left: 564px;
+    top: 74px;
+    opacity: 1;}
+  
+  100% {
+    left: 564px;
+    top: 74px;
+    opacity: 0;}
+}
+
+@-webkit-keyframes cop_after_effect {
+  0% {
+    left: 90px;
+    top: 32px;
+    opacity: 0;}
+  
+  15% {
+    left: 90px;
+    top: 32px;
+    opacity: 1;}
+  
+  30% {
+    left: 90px;
+    top: 32px;
+    opacity: 0;}
+  
+  35% {
+    left: 413px;
+    top: 11px;
+    opacity: 0;}
+   
+  50% {
+    left: 413px;
+    top: 11px;
+    opacity: 1;}
+  
+  65% {
+    left: 413px;
+    top: 11px;
+    opacity: 0;}
+  
+  70% {
+    left: 603px;
+    top: 32px;
+    opacity: 0;}
+   
+  85% {
+    left: 603px;
+    top: 32px;
+    opacity: 1;}
+  
+  100% {
+    left: 603px;
+    top: 32px;
+    opacity: 0;}
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font:100%/1.6 Roboto,sans-serif;
+  color:#333;
+  background-size: cover;
+  
+}
+
+@keyframes jiggle {
+  
+  0% {
+    transform:rotate(0deg) translateY(0px);
+  }
+
+  50% {
+    transform:rotate(13deg) translateY(5px);
+  }
+  
+  
+}
+
+span {
+  display: inline-block;
+}
+
+h1 {
+  display: inline-block;
+  text-align: center;
+  color: blue;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 40px;
+  border:3px solid blue;
+  border-right: none;
+  border-left:none;
+  transition:0.8s ease;
+  &:hover {
+    transform:scale(1.5) rotate(-5deg);
+  }
+  
+  & span:nth-child(1) {
+     animation:.3s ease-in-out 
+      infinite forwards jiggle;
+  }
+  
+  & span:nth-child(2) {
+     animation:.3s 0.1s ease-in-out 
+      infinite forwards jiggle;
+  }
+  
+  & span:nth-child(3) {
+     animation:.3s 0.2s ease-in-out 
+      infinite forwards jiggle;
+  }
+  
+  & span:nth-child(4) {
+     animation:.3s 0.3s ease-in-out 
+      infinite forwards jiggle;
+  }
+  
+  & span:nth-child(5) {
+     animation:.5s 0.4s ease-in-out 
+      infinite forwards jiggle;
+  }
+  
+  & span:nth-child(6) {
+     animation:.3s 0.5s ease-in-out 
+      infinite forwards jiggle;
+  }
+  
+  & span:nth-child(7) {
+     animation:.3s 0.6s ease-in-out 
+      infinite forwards jiggle;
+  }
+  
+  
+}
+.container {
+  min-height: 300px;
+  display:grid;
+  justify-content:center;
+  align-content:center;
+  
+}
+
+
+
+
+
+
+
+
+a{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+   
+}
+a:hover{
+    background: #204b7ca6;
+    color: #204b7ca6;
+    box-shadow: 0 0 5px #98d9f5,
+                0 0 25px #98d9f5,
+                0 0 50px #98d9f5,
+                0 0 200px #98d9f5;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #ffffff);
+
+}
+
+a span{
+    position: absolute;
+    display: block;
+}
+a span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#ffffff);
+    animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+    0%{
         left: -100%;
-      }
-      50%,
-      100% {
+    }
+    50%,100%{
         left: 100%;
-      }
     }
-
-    .links a span:nth-child(2) {
-      top: -100%;
-      right: 0;
-      width: 2px;
-      height: 100%;
-      background: linear-gradient(180deg, transparent, #ffffff);
-      animation: animate2 1s linear infinite;
-      animation-delay: 0.25s;
-    }
-
-    @keyframes animate2 {
-      0% {
+}
+a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#ffffff);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2{
+    0%{
         top: -100%;
-      }
-      50%,
-      100% {
+    }
+    50%,100%{
         top: 100%;
-      }
     }
-
-    .links a span:nth-child(3) {
-      bottom: 0;
-      right: 0;
-      width: 100%;
-      height: 2px;
-      background: linear-gradient(270deg, transparent, #ffffff);
-      animation: animate3 1s linear infinite;
-      animation-delay: 0.5s;
-    }
-
-    @keyframes animate3 {
-      0% {
+}
+a span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#ffffff);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+@keyframes animate3{
+    0%{
         right: -100%;
-      }
-      50%,
-      100% {
+    }
+    50%,100%{
         right: 100%;
-      }
     }
+}
 
-    .links a span:nth-child(4) {
-      bottom: -100%;
-      left: 0;
-      width: 2px;
-      height: 100%;
-      background: linear-gradient(360deg, transparent, #ffff);
-      animation: animate4 1s linear infinite;
-      animation-delay: 0.75s;
-    }
 
-    @keyframes animate4 {
-      0% {
+a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#ffff);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate4{
+    0%{
         bottom: -100%;
-      }
-      50%,
-      100% {
+    }
+    50%,100%{
         bottom: 100%;
-      }
     }
+}
 
-    .footer {
-      text-align: center;
-      font-size: 15px;
-      color: white;
-      margin-top: 40px;
-    }
 
-    .footer p {
-      margin-bottom: 10px;
-    }
-  </style>
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container-fluid{
+     font-weight: bold;
+    font-size: 40px;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    z-index: 1300;
+
+
+	
+</style>	
+  
 </head>
+ 
 
 <body>
-  <div class="container">
-    <div class="background-img">
+
+
+
+<div class="container">
+	
+
+  
+ <div class="background-img">
       <div class="box">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
         <div class="content">
-          <p><img src="https://xatimg.com/image/Z0IEkxjwTavk.gif" width="300" height="300"></p>
-        </div>
+        
+          <p><img src="https://xatimg.com/image/Z0IEkxjwTavk.gif" width="300" height="300"</p>
+	      </div>
+        
       </div>
-      <div class="box2">
+	 
+<div class="box2">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
         <div class="content2">
-          <p>My chats:</p>
-          <p>➤ xat.com/Help</p>
-          <p>➤ xat.com/Blog</p>
-          <p>➤ xat.com/OceanBot</p>
-          <p>➤ xat.com/Fexbots</p>
-          <p>➤ xat.com/Sephiroth</p>
-          <br>
-          <p>For Graphical requests,</p>
-          <p>add me /f700070000 and pc me</p>
-          <p>Discord: sephiroth0783</p>
-          <p>Email: sephiroth@xatblog.net</p>
-        </div>
-      </div>
-    </div>
-    <div class="links">
-      <a target="_blank" href="indexgifs.html">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        GIFs
-      </a>
-      <a target="_blank" href="indexspace.html">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Xatspaces
-      </a>
-      <a target="_blank" href="indexframes.html">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Xatframes
-      </a>
-      <a target="_blank" href="indexpcback.html">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        PCBack
-      </a>
-      <a target="_blank" href="indexbgs.html">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Backgrounds
-      </a>
-    </div>
-    <div id="wrapper">
-      <h1>
-        <span>S</span>
-        <span>e</span>
-        <span>p</span>
-        <span>h</span>
-        <span>i</span>
-        <span>roth</span>
-      </h1>
-      <div class="container">
-        <img src="https://xatimg.com/image/sOYAiwCxvWPf.png" class="center">
-      </div>
-      <div class="footer">
-        <p>© All rights reserved for this Gallery Theme to (Sephiroth 700070000)</p>
-        <p>Thank you! Discord: sephiroth0783 Email: sephiroth@xatblog.net</p>
-      </div>
-    </div>
-  </div>
-</body>
+        
+          <p>𝑴𝒚 𝒄𝒉𝒂𝒕𝒔: </p>
+		</br>
+	  <p> ➤𝒙𝒂𝒕.𝒄𝒐𝒎/𝑯𝒆𝒍𝒑 </p>
+          <p> ➤ 𝒙𝒂𝒕.𝒄𝒐𝒎/Blog  </p>
+	  <p> ➤ 𝒙𝒂𝒕.𝒄𝒐𝒎/OceanBot  </p>	
+           <p> ➤ 𝒙𝒂𝒕.𝒄𝒐𝒎/Fexbots  </p>
+	   <p> ➤ 𝒙𝒂𝒕.𝒄𝒐𝒎/𝑺𝒆𝒑𝒉𝒊𝒓𝒐𝒕𝒉  </p>
 
+	</br>
+	<p>➤ 𝑭𝒐𝒓 𝑮𝒓𝒂𝒑𝒉𝒊𝒄𝒔,</p>
+		<p>𝒂𝒅𝒅 𝒎𝒆 /𝒇𝟕𝟎𝟎𝟎𝟎𝟕𝟎𝟎𝟎  𝒂𝒏𝒅 𝒑𝒄 𝒎𝒆</p>
+		<p>Discord: sephiroth0783 </p>
+		<p>Email: sephiroth@xatblog.net</p>
+	</br>
+	      </div>
+        
+      </div>	
+  
+  </div>
+	
+
+
+<div> 
+	
+	
+	<a target="_blank" href="indexgifs.html"> 
+        <span></span> 
+        <span></span>
+        <span></span>
+        <span></span>
+         𝑮𝒊𝒇𝒔  
+    </a>
+    <a target="_blank" href="indexspace.html">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+       𝐗𝐚𝐭𝐬𝐩𝐚𝐜𝐞𝐬
+    </a>
+	 <a target="_blank" href="indexframes.html">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+       𝐗𝐚𝐭𝐟𝐫𝐚𝐦𝐞
+    </a>
+	
+    <a target="_blank" href="indexpcback.html">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        𝑷𝒄𝑩𝒂𝒄𝒌
+    </a>
+    <a target="_blank" href="indexbgs.html">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+       𝑩𝒂𝒄𝒌𝒈𝒓𝒐𝒖𝒏𝒅𝒔
+    </a>
+    
+   
+  </div>
+	
+<div id="wrapper">
+ 
+	
+  <h2 class="chrome"><span class="vectro-body">Sephiroth</span></h2>
+  
+
+	
+<br>	
+<br>
+	<br>
+	<br>
+	<div class="container">    
+   
+		
+	<img src="https://xatimg.com/image/sOYAiwCxvWPf.png"  class="center">	
+	      </div> 	
+	
+<h2 style="text-align:center; font-size:15px; color: white;">©𝑨𝒍𝒍 𝒓𝒊𝒈𝒉𝒕𝒔 𝒓𝒆𝒔𝒆𝒓𝒗𝒆𝒅 𝒇𝒐𝒓 𝒕𝒉𝒊𝒔 𝑮𝒂𝒍𝒍𝒆𝒓𝒚 𝑻𝒉𝒆𝒎𝒆 𝒕𝒐  (𝑺𝒆𝒑𝒉𝒊𝒓𝒐𝒕𝒉 𝟕𝟎𝟎𝟎𝟕𝟎𝟎𝟎) 
+	𝑫𝒐 𝒏𝒐𝒕 𝒄𝒐𝒑𝒚 𝒕𝒉𝒊𝒔 𝒇𝒐𝒓𝒎 𝒐𝒇 𝒆𝒅𝒊𝒕  𝒘𝒊𝒕𝒉𝒐𝒖𝒕 𝒑𝒆𝒓𝒎𝒊𝒔𝒔𝒊𝒐𝒏!</h2>
+
+<h2 style="text-align:center; font-size:15px; color: white;">©𝑻𝒉𝒂𝒏𝒌 𝒚𝒐𝒖! 𝑫𝒊𝒔𝒄𝒐𝒓𝒅: sephiroth0783 Email: sephiroth@xatblog.net  </h2>
+	
+	
+  </div>
+</div>
+       
+</div> 
+ 
+	
+	
+
+	<!-- Copyright (c) For editing, Seph (70007000) -->
+<!-- Copyright (c) name letters  https://codepen.io/boldfacedesign/pen/DpXjzY -->
+<!-- Copyright (c) square box animation https://codepen.io/uiswarup/pen/RBByzW -->
+
+  
+  
+  
+ <body>
 </html>
+  
