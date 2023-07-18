@@ -8,16 +8,25 @@
 
 <style>
 
-		.dreptunghi {
-  width: 300px;
+		.container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Pentru a centra pe verticală în funcție de înălțimea vizibilă a ferestrei */
+}
+
+.dreptunghi {
+  width: 700px;
   height: 200px;
   background-color: #ccc;
   padding: 20px;
+  margin: auto;
 }
 
 .text-bold {
   font-weight: bold;
 }
+
 
 
 	@media only screen and (max-width: 600px) {
@@ -442,9 +451,12 @@ nav,
 		  
 <!-- body . -->
 
-<div class="dreptunghi">
-  <p class="text-bold">Acesta este un text cu font bold!</p>
+<div class="container1">
+  <div class="dreptunghi">
+    <p class="text-bold">Acesta este un text cu font bold!</p>
+  </div>
 </div>
+
 
 	
 
