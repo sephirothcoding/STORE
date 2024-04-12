@@ -1,206 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sephiroth's Gallery</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font: 100%/1.6 Roboto, sans-serif;
-      color: #333;
-      background: linear-gradient(135deg, #00ff00, #ff00ff, #00ffff, #ffff00);
-      background-size: 400% 400%;
-      animation: neon-animation 10s ease infinite;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    .container {
-      position: relative;
-      width: 400px; /* Dimensiunea containerului */
-      height: 400px;
-      border-radius: 50%;
-      overflow: hidden;
-    }
-
-    .circle-menu {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      width: 200px; /* Dimensiunea meniului */
-      height: 200px;
-      border-radius: 50%;
-    }
-
-    .menu-item {
-      position: absolute;
-      width: 100px; /* Dimensiunea fiecărui element din meniu */
-      height: 100px;
-      border-radius: 50%;
-      background-color: rgba(32, 75, 124, 0.651);
-      margin: 10px;
-      color: white;
-      text-decoration: none;
-      font-size: 16px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      overflow: hidden;
-    }
-
-    .menu-item span {
-      position: absolute;
-      width: 50%;
-      height: 50%;
-      background: linear-gradient(90deg, transparent, #ffffff);
-      animation: animate1 1s linear infinite;
-    }
-
-    .menu-item span:nth-child(1) {
-      top: 0;
-      left: 50%;
-      transform-origin: bottom left;
-    }
-
-    .menu-item span:nth-child(2) {
-      bottom: 0;
-      left: 50%;
-      transform-origin: top left;
-    }
-
-    .menu-item span:nth-child(3) {
-      top: 50%;
-      left: 0;
-      transform-origin: top right;
-    }
-
-    .menu-item span:nth-child(4) {
-      top: 50%;
-      right: 0;
-      transform-origin: top left;
-    }
-
-    @keyframes animate1 {
-      0% { transform: scaleX(0); }
-      100% { transform: scaleX(1); }
-    }
-
-    .circle-image {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .circle-image img {
-      border-radius: 50%;
-      width: 200px; /* Dimensiunea imaginii circulare */
-      height: 200px;
-    }
-
-    .box2 {
-      position: absolute;
-      top: calc(50% + 120px); /* Poziționează sub meniu */
-      left: 50%;
-      transform: translateX(-50%);
-      text-align: center;
-      color: white;
-    }
-
-    .content2 {
-      padding: 20px;
-    }
-
-    @keyframes neon-animation {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meniu cu Navigare Circulară</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .menu li {
+    margin: 0 20px;
+    transform: translateY(-50px);
+    transition: transform 0.5s ease;
+  }
+  
+  .menu li:hover {
+    transform: scale(1.2) translateY(-50px);
+  }
+  
+  .menu li a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #f00;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: background-color 0.5s ease;
+  }
+  
+  .menu li a:hover {
+    background-color: #ff0;
+  }
+</style>
 </head>
 <body>
-
-<div class="container">
-  <div class="circle-menu">
-    <a href="#" class="menu-item" style="transform: rotate(0deg);">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      𝑩𝒂𝒄𝒌𝒈𝒓𝒐𝒖𝒏𝒅𝒔
-    </a>
-    <a href="#" class="menu-item" style="transform: rotate(60deg);">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      𝑮𝒊𝒇𝒔
-    </a>
-    <a href="#" class="menu-item" style="transform: rotate(120deg);">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      𝐗𝐚𝐭𝐬𝐩𝐚𝐜𝐞𝐬
-    </a>
-    <a href="#" class="menu-item" style="transform: rotate(180deg);">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      𝑷𝒄𝑩𝒂𝒄𝒌
-    </a>
-    <a href="#" class="menu-item" style="transform: rotate(240deg);">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      𝑹𝒂𝒅𝒊𝒐
-    </a>
-    <a href="#" class="menu-item" style="transform: rotate(300deg);">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      𝑭𝒐𝒓 𝑫𝒆𝒔𝒊𝒈𝒏𝒆𝒓𝒔
-    </a>
-  </div>
-  <div class="circle-image">
-    <img src="https://xatimg.com/image/WNcLhvEAtwAb.jpg" alt="Circular Image">
-  </div>
-  <div class="box2">
-    <div class="content2">
-      <p>𝑴𝒚 𝒄𝒉𝒂𝒕𝒔: </p>
-      <br>
-      <p> ➤ 𝒙𝒂𝒕.𝒄𝒐𝒎/𝑯𝒆𝒍𝒑  </p>
-      <p> ➤ 𝒙𝒂𝒕.𝒄𝒐𝒎/𝑨𝑹𝑪𝑩𝒐𝒕  </p>
-      <p> ➤ 𝒙𝒂𝒕.𝒄𝒐𝒎/𝑨𝒔𝒔𝒊𝒔𝒕𝒂𝒏𝒄𝒆 </p>
-      <br>
-      <p>➤ 𝑭𝒐𝒓 𝑮𝒓𝒂𝒑𝒉𝒊𝒄𝒔,</p>
-      <p>𝒂𝒅𝒅 𝒎𝒆 /𝒇𝟕𝟎𝟎𝟎𝟎𝟕𝟎𝟎𝟎  𝒂𝒏𝒅 𝒑𝒄 𝒎𝒆</p>
-    </div>
-  </div>
-</div>
-
+  <ul class="menu">
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">6</a></li>
+    <li><a href="#">7</a></li>
+    <li><a href="#">8</a></li>
+    <li><a href="#">9</a></li>
+    <li><a href="#">10</a></li>
+  </ul>
 </body>
 </html>
