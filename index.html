@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>hjjjjjjjjjjjjjjjjjjjjj</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
 <div class="container" x-data="{ rightSide: false, leftSide: false }">
   <div class="left-side" :class="{'active' : leftSide}">
     <div class="left-side-button" @click="leftSide = !leftSide">
@@ -503,3 +515,6 @@
   </div>
   <div class="overlay" @click="rightSide = false; leftSide = false" :class="{ 'active': rightSide || leftSide }"></div>
 </div>
+
+</body>
+</html>
