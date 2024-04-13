@@ -258,7 +258,7 @@ body {
 }
 .side-menu a {
   text-decoration: none;
-  color: #9c9cab;
+  color: #ffffff;
   display: flex;
   align-items: center;
 }
@@ -276,7 +276,7 @@ body {
   align-items: center;
   margin-top: auto;
   overflow: hidden;
-  color: #9c9cab;
+  color: #ffffff;
   padding: 0 20px;
   height: 52px;
   flex-shrink: 0;
