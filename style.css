@@ -236,7 +236,7 @@ body {
 
 .side-title {
   font-family: "DM Sans", sans-serif;
-  color: #5c5e6e;
+  color: #ffffff;
   font-size: 15px;
   font-weight: 600;
   margin-bottom: 20px;
@@ -401,7 +401,7 @@ body {
 
 .profile-menu-link {
   padding: 20px 16px;
-  color: #5c5e6e;
+  color: #ffffff;
   transition: 0.3s;
   cursor: pointer;
 }
@@ -475,7 +475,7 @@ body {
 }
 .intro-title {
   font-family: "DM Sans", sans-serif;
-  color: #5c5e6e;
+  color: #ffff;
   font-weight: 600;
   font-size: 18px;
   display: flex;
@@ -567,7 +567,7 @@ body {
 }
 
 .event-subtitle {
-  color: #5c5e6e;
+  color: #ffff;
   font-family: "DM Sans", sans-serif;
   font-size: 13px;
   font-weight: 500;
