@@ -27,6 +27,19 @@ body {
   color: #ccc8db;
 }
 
+	 .stats {
+            position: absolute;
+            transform: translate(-50%, -50%);
+            width: auto;
+            height: auto;
+            border-right: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            overflow: auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
    
   .page-title {
     font-size: 32px;
@@ -2406,7 +2419,38 @@ body {
         </div>
       </div>
 
-   
+   	  
+  <div class="side-wrapper">
+ <div class="stats">
+
+        <div class="stat">
+            <b>name</b>
+            <span>Sephiroth</span>
+        </div>
+
+        <div class="stat">
+            <b>age</b>
+            <span>41</span>
+        </div>
+
+        <div class="stat">
+            <b>pronouns</b>
+            <span>he/him</span>
+        </div>
+
+        <div class="stat">
+            <b>location</b>
+            <span>Romania</span>
+        </div>
+
+        <div class="stat">
+            <b>star sign</b>
+            <span>Aries</span>
+        </div>
+
+    </div>
+	  
+    </div>
 	    
   </div>
   <div class="overlay" @click="rightSide = false; leftSide = false" :class="{ 'active': rightSide || leftSide }"></div>
