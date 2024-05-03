@@ -13,6 +13,52 @@
 
 <style>
 
+.category-title {
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   background-image: linear-gradient(135deg, #abb9c2, #434343);
+}
+
+
+  .gif-container {
+    display: none;
+  }
+
+  .gif-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    justify-content: center; /* Center the gifs horizontally */
+  }
+
+  .gif-item {
+    width: calc(10% - 20px); /* Adjust the width to fit 10 gifs per row */
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .gif-item img {
+    max-width: 80px; /* Limit the maximum width of the gif */
+    max-height: 80px; /* Limit the maximum height of the gif */
+    border-radius: 5px;
+  }
+
+  .gif-info {
+    font-size: 10px;
+    margin-top: 10px;
+  }
+
 
 
 .dreptunghi {
