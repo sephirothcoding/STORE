@@ -1,3 +1,103 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #87ceeb; /* Sky Blue */
+    position: relative;
+    display: inline-block;
+}
+
+section h2::before,
+section h2::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 4px;
+    background-color: #87ceeb; /* Sky Blue */
+    bottom: -10px;
+    transition: width 0.3s ease;
+}
+
+section h2::before {
+    left: 0;
+}
+
+section h2::after {
+    right: 0;
+}
+
+section h2:hover::before,
+section h2:hover::after {
+    width: 80%;
+}
+
+.contributions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contribution {
+    flex: 0 0 calc(50% - 20px);
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #87ceeb; /* Sky Blue */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.contribution:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.contribution h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.contribution p {
+    font-size: 1.1em;
+    color: #fff;
+}
+
+.contribution i {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.contribution:hover i {
+    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 768px) {
+    .contribution {
+        flex: 0 0 100%;
+    }
+}
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
