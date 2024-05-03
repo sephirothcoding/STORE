@@ -1,97 +1,114 @@
-/* Reset CSS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.container {
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Sky Blue */
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+        }
 
-section {
-    padding: 50px 0;
-    text-align: center;
-}
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
 
-section h2 {
-    font-size: 3em;
-    margin-bottom: 20px;
-    color: #87ceeb; /* Sky Blue */
-    position: relative;
-    display: inline-block;
-}
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-section h2::before,
-section h2::after {
-    content: "";
-    position: absolute;
-    width: 50%;
-    height: 4px;
-    background-color: #87ceeb; /* Sky Blue */
-    bottom: -10px;
-    transition: width 0.3s ease;
-}
+        section {
+            padding: 50px 0;
+            text-align: center;
+        }
 
-section h2::before {
-    left: 0;
-}
+        section h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #87ceeb; /* Sky Blue */
+            position: relative;
+            display: inline-block;
+        }
 
-section h2::after {
-    right: 0;
-}
+        section h2::before,
+        section h2::after {
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 4px;
+            background-color: #87ceeb; /* Sky Blue */
+            bottom: -10px;
+            transition: width 0.3s ease;
+        }
 
-section h2:hover::before,
-section h2:hover::after {
-    width: 80%;
-}
+        section h2::before {
+            left: 0;
+        }
 
-.contributions {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
+        section h2::after {
+            right: 0;
+        }
 
-.contribution {
-    flex: 0 0 calc(50% - 20px);
-    margin-bottom: 40px;
-    padding: 20px;
-    background-color: #87ceeb; /* Sky Blue */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
+        section h2:hover::before,
+        section h2:hover::after {
+            width: 80%;
+        }
 
-.contribution:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
+        .contributions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
 
-.contribution h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #fff;
-    text-transform: uppercase;
-}
+        .contribution {
+            flex: 0 0 100%; /* Schimbare la lățimea coloanei */
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #87ceeb; /* Sky Blue */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
 
-.contribution p {
-    font-size: 1.1em;
-    color: #fff;
-}
+        .contribution:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
 
-.contribution i {
-    font-size: 3em;
-    margin-bottom: 10px;
-    color: #fff;
-    transition: transform 0.3s ease;
-}
+        .contribution h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #fff;
+            text-transform: uppercase;
+        }
 
-.contribution:hover i {
-    transform: rotate(360deg);
-}
+        .contribution p {
+            font-size: 1.1em;
+            color: #fff;
+        }
+
+        .contribution i {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #fff;
+            transition: transform 0.3s ease;
+        }
+
+        .contribution:hover i {
+            transform: rotate(360deg);
+        }
 
 @media screen and (max-width: 768px) {
     .contribution {
