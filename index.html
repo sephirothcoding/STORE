@@ -17,13 +17,11 @@
       color: white;
     }
 
-    /* Animation */
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Container Style */
     .profile-container {
       background-color: #f0f4f8;
       color: #333;
@@ -31,29 +29,27 @@
       overflow: hidden;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
       width: 75%;
-      height: 80%;
-      animation: fadeIn 1s ease-in-out;
+      height: 85%;
       display: flex;
       flex-direction: column;
+      animation: fadeIn 1s ease-in-out;
       position: relative;
     }
 
-    /* Cover Image */
+    /* Cover Image - Increased height */
     .profile-cover {
       width: 100%;
-      height: 250px;
+      height: 350px;
       background: url('https://xatimg.com/image/nQYSIXd7WHHO.jpg') no-repeat center center;
       background-size: cover;
       position: relative;
-      animation: fadeIn 2s ease-in-out;
     }
 
-    /* Avatar */
+    /* Avatar repositioned to the left */
     .profile-avatar {
       position: absolute;
-      top: 150px;
-      left: 50%;
-      transform: translateX(-50%);
+      top: 250px;
+      left: 30px;
       transition: transform 0.3s ease;
     }
 
@@ -65,21 +61,20 @@
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     }
 
-    /* On hover, avatar zooms in */
     .profile-avatar:hover {
-      transform: translateX(-50%) scale(1.1);
+      transform: scale(1.1);
     }
 
-    /* Profile Information */
     .profile-info {
       text-align: center;
-      margin-top: 100px;
+      margin-top: 50px;
       padding: 20px;
       background-color: #f7f9fc;
       animation: fadeIn 2.5s ease-in-out;
       border-radius: 10px;
       color: #333;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      position: relative;
     }
 
     .profile-info h2 {
@@ -128,7 +123,7 @@
       background-color: #ff7700;
     }
 
-    /* Profile Footer - Copyright */
+    /* Footer - Adjusted for better visibility */
     .profile-footer {
       background-color: #1a73e8;
       color: white;
@@ -150,24 +145,24 @@
     <!-- Cover Image -->
     <div class="profile-cover"></div>
     
-    <!-- Avatar -->
+    <!-- Avatar moved to the left -->
     <div class="profile-avatar">
       <img src="https://xatimg.com/image/gumjedsSS1jw.gif" alt="Sephiroth's Avatar">
     </div>
     
-    <!-- Profile Info -->
+    <!-- Profile Info with centered text -->
     <div class="profile-info">
       <h2>Sephiroth</h2>
       <p>ID: 1538769249</p>
       <p>Zodiac: Aries</p>
       <p>Discord: sephiroth0783</p>
       
-      <!-- Highlighted Information Section -->
+      <!-- Highlighted Information -->
       <div class="highlighted-info">
         Interested in purchasing editable GIFs or custom xatspaces? <br> Contact me directly via private chat!
       </div>
       
-      <!-- Creative Button -->
+      <!-- Follow Button -->
       <button>Follow Me</button>
     </div>
     
