@@ -6,8 +6,8 @@
   <title>Sephiroth's Profile</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #282c34;
+      font-family: 'Arial', sans-serif;
+      background-color: #2f3e50;
       margin: 0;
       padding: 0;
       display: flex;
@@ -25,14 +25,17 @@
 
     /* Container Style */
     .profile-container {
-      background-color: #fff;
+      background-color: #f0f4f8;
       color: #333;
       border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-      max-width: 75%;
-      height: 75%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      width: 75%;
+      height: 80%;
       animation: fadeIn 1s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      position: relative;
     }
 
     /* Cover Image */
@@ -72,13 +75,17 @@
       text-align: center;
       margin-top: 100px;
       padding: 20px;
+      background-color: #f7f9fc;
       animation: fadeIn 2.5s ease-in-out;
+      border-radius: 10px;
+      color: #333;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
 
     .profile-info h2 {
       font-size: 28px;
       margin-bottom: 10px;
-      color: #333;
+      color: #1a73e8;
       font-weight: bold;
       text-transform: uppercase;
       letter-spacing: 1.5px;
@@ -92,8 +99,8 @@
 
     /* Highlighted Information */
     .highlighted-info {
-      background-color: #ffeb3b;
-      color: #000;
+      background-color: #1a73e8;
+      color: white;
       padding: 15px;
       border-radius: 5px;
       margin-top: 20px;
@@ -107,7 +114,7 @@
     .profile-info button {
       margin-top: 20px;
       padding: 10px 20px;
-      background-color: #ff4757;
+      background-color: #ffa500;
       color: white;
       border: none;
       border-radius: 25px;
@@ -118,18 +125,21 @@
     }
 
     .profile-info button:hover {
-      background-color: #ff6b81;
+      background-color: #ff7700;
     }
 
-    /* Profile Footer */
+    /* Profile Footer - Copyright */
     .profile-footer {
+      background-color: #1a73e8;
+      color: white;
+      padding: 15px 10px;
+      font-size: 14px;
       text-align: center;
-      padding: 10px;
-      background-color: #f7f7f7;
-      color: #999;
       position: absolute;
       bottom: 0;
       width: 100%;
+      border-radius: 0 0 10px 10px;
+      animation: fadeIn 3.5s ease-in-out;
     }
 
   </style>
@@ -154,7 +164,7 @@
       
       <!-- Highlighted Information Section -->
       <div class="highlighted-info">
-        Interested in purchasing editable GIFs or custom xatspaces? <br> Please contact me directly via private chat!
+        Interested in purchasing editable GIFs or custom xatspaces? <br> Contact me directly via private chat!
       </div>
       
       <!-- Creative Button -->
@@ -163,7 +173,7 @@
     
     <!-- Footer -->
     <div class="profile-footer">
-      © 2024 Sephiroth. All rights reserved.
+      © 2024 Sephiroth. All rights reserved. | No copying or redistribution allowed.
     </div>
   </div>
 
