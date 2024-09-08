@@ -45,29 +45,30 @@
       position: relative;
     }
 
-    /* Avatar repositioned to the left */
+    /* Avatar now centered */
     .profile-avatar {
       position: absolute;
-      top: 250px;
-      left: 30px;
+      top: 240px;
+      left: 50%;
+      transform: translateX(-50%);
       transition: transform 0.3s ease;
     }
 
     .profile-avatar img {
-      width: 150px;
-      height: 150px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       border: 5px solid white;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     }
 
     .profile-avatar:hover {
-      transform: scale(1.1);
+      transform: translateX(-50%) scale(1.1);
     }
 
     .profile-info {
       text-align: center;
-      margin-top: 50px;
+      margin-top: 120px;
       padding: 20px;
       background-color: #f7f9fc;
       animation: fadeIn 2.5s ease-in-out;
@@ -78,18 +79,28 @@
     }
 
     .profile-info h2 {
-      font-size: 28px;
+      font-size: 34px;
       margin-bottom: 10px;
       color: #1a73e8;
       font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
 
     .profile-info p {
-      margin: 5px 0;
+      margin: 10px 0;
       font-size: 18px;
       color: #666;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      line-height: 1.5;
+    }
+
+    .profile-info .important-text {
+      font-style: italic;
+      font-size: 20px;
+      color: #ff5555;
+      margin-top: 15px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
     }
 
     /* Highlighted Information */
@@ -98,29 +109,13 @@
       color: white;
       padding: 15px;
       border-radius: 5px;
-      margin-top: 20px;
+      margin-top: 30px;
       animation: fadeIn 2.8s ease-in-out;
       font-size: 16px;
       font-weight: bold;
       text-align: center;
-    }
-
-    /* Buttons */
-    .profile-info button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #ffa500;
-      color: white;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
-      animation: fadeIn 3s ease-in-out;
-    }
-
-    .profile-info button:hover {
-      background-color: #ff7700;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      border: 2px solid #ff9900;
     }
 
     /* Footer - Adjusted for better visibility */
@@ -145,25 +140,22 @@
     <!-- Cover Image -->
     <div class="profile-cover"></div>
     
-    <!-- Avatar moved to the left -->
+    <!-- Avatar in the middle -->
     <div class="profile-avatar">
       <img src="https://xatimg.com/image/gumjedsSS1jw.gif" alt="Sephiroth's Avatar">
     </div>
     
-    <!-- Profile Info with centered text -->
+    <!-- Profile Info with styled text -->
     <div class="profile-info">
       <h2>Sephiroth</h2>
-      <p>ID: 1538769249</p>
-      <p>Zodiac: Aries</p>
-      <p>Discord: sephiroth0783</p>
+      <p>ID: <span class="important-text">1538769249</span></p>
+      <p>Zodiac: <span class="important-text">Aries</span></p>
+      <p>Discord: <span class="important-text">sephiroth0783</span></p>
       
       <!-- Highlighted Information -->
       <div class="highlighted-info">
         Interested in purchasing editable GIFs or custom xatspaces? <br> Contact me directly via private chat!
       </div>
-      
-      <!-- Follow Button -->
-      <button>Follow Me</button>
     </div>
     
     <!-- Footer -->
