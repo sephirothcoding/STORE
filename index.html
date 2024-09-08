@@ -92,6 +92,38 @@
             transform: scale(1.05);
         }
 
+        .info-cards {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .info-card {
+            background-color: #f0f4f8;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: 30%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .info-card h3 {
+            margin-top: 0;
+            color: #1a73e8;
+            font-size: 1.5rem;
+        }
+
+        .info-card p {
+            margin: 10px 0;
+            color: #555;
+        }
+
         .footer-text {
             text-align: center;
             margin-top: 20px;
@@ -118,6 +150,20 @@
             <div class="profile-buttons">
                 <a href="https://xat.com/gallery" target="_blank">Xatspace Gallery</a>
                 <a href="https://xat.com/editables" target="_blank">GIF Editables</a>
+            </div>
+        </div>
+        <div class="info-cards">
+            <div class="info-card">
+                <h3>About Me</h3>
+                <p>I am a passionate developer and designer with extensive experience in the xat community. Always looking for new challenges and opportunities to innovate.</p>
+            </div>
+            <div class="info-card">
+                <h3>My Projects</h3>
+                <p>Currently working on various projects including xatspaces and GIFs. My goal is to provide high-quality content and services to enhance user experiences.</p>
+            </div>
+            <div class="info-card">
+                <h3>Contact</h3>
+                <p>Feel free to reach out to me for any inquiries or collaborations. I am always open to new ideas and partnerships.</p>
             </div>
         </div>
         <div class="footer-text">
