@@ -5,16 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sephiroth's Profile</title>
   <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #2f3e50;
+    /* General Settings */
+    body, html {
       margin: 0;
       padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      color: white;
     }
 
     @keyframes fadeIn {
@@ -22,114 +23,151 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    /* Main Profile Container */
     .profile-container {
-      background-color: #f0f4f8;
-      color: #333;
-      border-radius: 10px;
+      background-color: #fff;
+      width: 80%;
+      max-width: 1100px;
+      border-radius: 15px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-      width: 75%;
-      height: 85%;
-      display: flex;
-      flex-direction: column;
       animation: fadeIn 1s ease-in-out;
-      position: relative;
     }
 
-    /* Cover Image - Increased height */
+    /* Cover Section */
     .profile-cover {
       width: 100%;
-      height: 350px;
+      height: 300px;
       background: url('https://xatimg.com/image/nQYSIXd7WHHO.jpg') no-repeat center center;
       background-size: cover;
       position: relative;
+      border-bottom: 5px solid #1a73e8;
     }
 
-    /* Avatar now centered */
+    /* Avatar Section */
     .profile-avatar {
       position: absolute;
-      top: 240px;
+      top: 200px;
       left: 50%;
       transform: translateX(-50%);
-      transition: transform 0.3s ease;
+      width: 180px;
+      height: 180px;
+      border: 5px solid white;
+      border-radius: 50%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
     }
 
     .profile-avatar img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      border: 5px solid white;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    .profile-avatar:hover {
-      transform: translateX(-50%) scale(1.1);
-    }
-
+    /* Profile Info Section */
     .profile-info {
       text-align: center;
-      margin-top: 120px;
-      padding: 20px;
-      background-color: #f7f9fc;
-      animation: fadeIn 2.5s ease-in-out;
-      border-radius: 10px;
-      color: #333;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      padding: 140px 20px 40px 20px;
       position: relative;
+      background: linear-gradient(135deg, #f7f9fc, #ebf1f8);
     }
 
     .profile-info h2 {
-      font-size: 34px;
-      margin-bottom: 10px;
+      font-size: 36px;
       color: #1a73e8;
+      margin: 10px 0;
       font-weight: bold;
       letter-spacing: 2px;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     }
 
     .profile-info p {
-      margin: 10px 0;
       font-size: 18px;
       color: #666;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-      line-height: 1.5;
-    }
-
-    .profile-info .important-text {
+      margin-bottom: 20px;
       font-style: italic;
-      font-size: 20px;
-      color: #ff5555;
-      margin-top: 15px;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     }
 
-    /* Highlighted Information */
-    .highlighted-info {
+    /* Text Box Styles */
+    .info-box {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .info-card {
+      background-color: #fff;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      flex: 1;
+      text-align: center;
+      border-left: 5px solid #1a73e8;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .info-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .info-card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .info-card p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    /* Contact Information */
+    .contact-info {
+      background-color: #f0f4f8;
+      padding: 30px;
+      text-align: center;
+      border-radius: 10px;
+      margin: 20px;
+    }
+
+    .contact-info h4 {
+      font-size: 24px;
+      color: #1a73e8;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .contact-info p {
+      font-size: 18px;
+      color: #666;
+    }
+
+    .highlight {
       background-color: #1a73e8;
       color: white;
-      padding: 15px;
+      padding: 10px;
       border-radius: 5px;
-      margin-top: 30px;
-      animation: fadeIn 2.8s ease-in-out;
-      font-size: 16px;
+      display: inline-block;
       font-weight: bold;
-      text-align: center;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-      border: 2px solid #ff9900;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
     }
 
-    /* Footer - Adjusted for better visibility */
+    .highlight:hover {
+      transform: scale(1.05);
+    }
+
+    /* Footer */
     .profile-footer {
       background-color: #1a73e8;
       color: white;
-      padding: 15px 10px;
-      font-size: 14px;
+      padding: 20px;
       text-align: center;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      border-radius: 0 0 10px 10px;
-      animation: fadeIn 3.5s ease-in-out;
+      font-size: 14px;
+      border-top: 5px solid #ebf1f8;
     }
 
   </style>
@@ -140,27 +178,42 @@
     <!-- Cover Image -->
     <div class="profile-cover"></div>
     
-    <!-- Avatar in the middle -->
+    <!-- Avatar Section -->
     <div class="profile-avatar">
       <img src="https://xatimg.com/image/gumjedsSS1jw.gif" alt="Sephiroth's Avatar">
     </div>
     
-    <!-- Profile Info with styled text -->
+    <!-- Profile Info -->
     <div class="profile-info">
       <h2>Sephiroth</h2>
-      <p>ID: <span class="important-text">1538769249</span></p>
-      <p>Zodiac: <span class="important-text">Aries</span></p>
-      <p>Discord: <span class="important-text">sephiroth0783</span></p>
-      
-      <!-- Highlighted Information -->
-      <div class="highlighted-info">
-        Interested in purchasing editable GIFs or custom xatspaces? <br> Contact me directly via private chat!
+      <p>ID: 1538769249 | Zodiac: Aries | Discord: sephiroth0783</p>
+
+      <!-- Info Boxes -->
+      <div class="info-box">
+        <div class="info-card">
+          <h3>Biography</h3>
+          <p>Gamer, designer, and digital enthusiast. Sephiroth is known for his creative approach and passion for bringing ideas to life.</p>
+        </div>
+        <div class="info-card">
+          <h3>Skills</h3>
+          <p>Graphic Design, Animation, Web Development, and Custom GIF creation. Master of visual storytelling.</p>
+        </div>
+        <div class="info-card">
+          <h3>Contact</h3>
+          <p>For business inquiries or custom projects, reach me directly via chat or Discord!</p>
+        </div>
+      </div>
+
+      <!-- Contact Info with Highlight -->
+      <div class="contact-info">
+        <h4>Looking to purchase custom GIFs or xatspace designs?</h4>
+        <p>Send me a <span class="highlight">private message</span> for inquiries!</p>
       </div>
     </div>
-    
-    <!-- Footer -->
+
+    <!-- Footer Section -->
     <div class="profile-footer">
-      © 2024 Sephiroth. All rights reserved. | No copying or redistribution allowed.
+      © 2024 Sephiroth. All rights reserved.
     </div>
   </div>
 
