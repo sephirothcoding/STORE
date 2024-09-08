@@ -1,257 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sephiroth's Profile</title>
-  <style>
-    /* General Settings */
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #f5f7fa;
-      color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: skyblue;
+            font-family: Arial, sans-serif;
+        }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+        .profile-container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
 
-    /* Main Profile Container */
-    .profile-container {
-      background-color: #fff;
-      width: 80%;
-      max-width: 1100px;
-      border-radius: 15px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-      overflow: hidden;
-      animation: fadeIn 1s ease-in-out;
-      position: relative;
-    }
+        .profile-cover {
+            width: 100%;
+            height: 400px; /* Ajustează dimensiunea pentru a fi mai mare */
+            background: url('https://xatimg.com/image/nQYSIXd7WHHO.jpg') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            border-bottom: 5px solid #1a73e8;
+        }
 
-    /* Cover Section */
-    .profile-cover {
-      width: 100%;
-      height: 350px; /* Increased height */
-      background: url('https://xatimg.com/image/nQYSIXd7WHHO.jpg') no-repeat center center;
-      background-size: cover;
-      position: relative;
-      border-bottom: 5px solid #1a73e8;
-    }
+        .avatar-container {
+            position: absolute;
+            top: 250px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #ffffff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
 
-    /* Avatar Section */
-    .profile-avatar {
-      position: absolute;
-      top: 230px; /* Adjusted position */
-      left: 50%;
-      transform: translateX(-50%);
-      width: 180px;
-      height: 180px;
-      border: 5px solid white;
-      border-radius: 50%;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-      overflow: hidden;
-    }
+        .avatar {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-    .profile-avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+        .profile-details {
+            text-align: center;
+            margin-top: 80px;
+        }
 
-    /* Profile Info Section */
-    .profile-info {
-      text-align: center;
-      padding: 150px 20px 40px 20px; /* Adjusted padding to fit new cover height */
-      position: relative;
-      background: linear-gradient(135deg, #f7f9fc, #ebf1f8);
-    }
+        .profile-details h1 {
+            margin: 0;
+            color: #1a73e8;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
 
-    .profile-info h2 {
-      font-size: 36px;
-      color: #1a73e8;
-      margin: 10px 0;
-      font-weight: bold;
-      letter-spacing: 2px;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    }
+        .profile-details p {
+            margin: 10px 0;
+            font-size: 1.1rem;
+            color: #333;
+            font-style: italic;
+        }
 
-    .profile-info p {
-      font-size: 18px;
-      color: #666;
-      margin-bottom: 20px;
-      font-style: italic;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    }
+        .profile-buttons {
+            margin-top: 20px;
+        }
 
-    /* Text Box Styles */
-    .info-box {
-      display: flex;
-      justify-content: space-around;
-      padding: 20px;
-      gap: 20px;
-    }
+        .profile-buttons a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #1a73e8;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background-color 0.3s, transform 0.3s;
+        }
 
-    .info-card {
-      background-color: #fff;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      padding: 20px;
-      border-radius: 10px;
-      flex: 1;
-      text-align: center;
-      border-left: 5px solid #1a73e8;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+        .profile-buttons a:hover {
+            background-color: #155ab8;
+            transform: scale(1.05);
+        }
 
-    .info-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    }
+        .footer-text {
+            text-align: center;
+            margin-top: 20px;
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: bold;
+        }
 
-    .info-card h3 {
-      font-size: 22px;
-      margin-bottom: 10px;
-      color: #333;
-    }
-
-    .info-card p {
-      font-size: 16px;
-      color: #555;
-    }
-
-    /* Contact Information */
-    .contact-info {
-      background-color: #f0f4f8;
-      padding: 30px;
-      text-align: center;
-      border-radius: 10px;
-      margin: 20px;
-    }
-
-    .contact-info h4 {
-      font-size: 24px;
-      color: #1a73e8;
-      margin-bottom: 15px;
-      font-weight: bold;
-    }
-
-    .contact-info p {
-      font-size: 18px;
-      color: #666;
-    }
-
-    .highlight {
-      background-color: #1a73e8;
-      color: white;
-      padding: 10px;
-      border-radius: 5px;
-      display: inline-block;
-      font-weight: bold;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .highlight:hover {
-      transform: scale(1.05);
-    }
-
-    /* Buttons */
-    .buttons {
-      margin-top: 20px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .button {
-      background-color: #1a73e8;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      padding: 15px 25px;
-      font-size: 16px;
-      cursor: pointer;
-      text-transform: uppercase;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-      transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-
-    .button:hover {
-      background-color: #1558b0;
-      transform: translateY(-2px);
-    }
-
-    .button:active {
-      background-color: #0d47a1;
-      transform: translateY(0);
-    }
-
-    /* Footer */
-    .profile-footer {
-      background-color: #1a73e8;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      font-size: 14px;
-      border-top: 5px solid #ebf1f8;
-    }
-
-  </style>
+        .footer-text p {
+            margin: 5px 0;
+        }
+    </style>
 </head>
 <body>
-
-  <div class="profile-container">
-    <!-- Cover Image -->
-    <div class="profile-cover"></div>
-    
-    <!-- Avatar Section -->
-    <div class="profile-avatar">
-      <img src="https://xatimg.com/image/gumjedsSS1jw.gif" alt="Sephiroth's Avatar">
+    <div class="profile-container">
+        <div class="profile-cover"></div>
+        <div class="avatar-container">
+            <img src="https://xatimg.com/image/gumjedsSS1jw.gif" alt="Avatar" class="avatar">
+        </div>
+        <div class="profile-details">
+            <h1>Sephiroth</h1>
+            <p>ID: 1538769249</p>
+            <p>Send me a private message for inquiries!</p>
+            <div class="profile-buttons">
+                <a href="https://xat.com/gallery" target="_blank">Xatspace Gallery</a>
+                <a href="https://xat.com/editables" target="_blank">GIF Editables</a>
+            </div>
+        </div>
+        <div class="footer-text">
+            <p>&copy; 2024 Sephiroth. All rights reserved.</p>
+        </div>
     </div>
-    
-    <!-- Profile Info -->
-    <div class="profile-info">
-      <h2>Sephiroth</h2>
-      <p>ID: 1538769249 | Zodiac: Aries | Discord: sephiroth0783</p>
-
-      <!-- Info Boxes -->
-      <div class="info-box">
-        <div class="info-card">
-          <h3>Biography</h3>
-          <p>Gamer, designer, and digital enthusiast. Sephiroth is known for his creative approach and passion for bringing ideas to life.</p>
-        </div>
-        <div class="info-card">
-          <h3>Skills</h3>
-          <p>Graphic Design, Animation, Web Development, and Custom GIF creation. Master of visual storytelling.</p>
-        </div>
-        <div class="info-card">
-          <h3>Contact</h3>
-          <p>For business inquiries or custom projects, reach me directly via chat or Discord!</p>
-        </div>
-      </div>
-
-      <!-- Contact Info with Highlight -->
-      <div class="contact-info">
-        <h4>Looking to purchase custom GIFs or xatspace designs?</h4>
-        <p>Send me a <span class="highlight">private message</span> for inquiries!</p>
-        <div class="buttons">
-          <a href="https://xat.com/xatspacegallery" target="_blank" class="button">Visit xatspace Gallery</a>
-          <a href="https://xat.com/gifeditables" target="_blank" class="button">View GIF Editables</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer Section -->
-    <div class="profile-footer">
-      © 2024 Sephiroth. All rights reserved.
-    </div>
-  </div>
-
 </body>
 </html>
