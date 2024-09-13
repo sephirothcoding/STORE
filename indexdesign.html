@@ -3,146 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery Models for Designers</title>
+    <title>Online Shop pentru Modele Website-uri</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-            text-align: center;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
         }
-        h1 {
-            background-color: #4CAF50;
+
+        header {
+            background-color: #333;
             color: white;
-            padding: 20px;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        h1 {
             margin: 0;
         }
-        .player-container {
+
+        main {
+            padding: 20px;
+        }
+
+        .product-list {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-            justify-content: center;
-            padding: 20px;
         }
-        .player {
-            width: 600px; /* Dimensiunea containerului pentru iframe-uri */
-            height: 600px; /* Dimensiunea containerului pentru iframe-uri */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid #ccc;
-            background-color: #fff;
-            padding: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden; /* Ascunde conținutul care depășește dimensiunea */
+
+        .product {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: calc(33.333% - 40px);
             box-sizing: border-box;
         }
-        .player iframe {
-            width: 200%; /* Scalează iframe-ul pentru a arăta întreaga pagină */
-            height: 200%;
-            border: none;
-            transform: scale(0.5); /* Micșorează iframe-ul pentru a se încadra în dimensiune */
-            transform-origin: 0 0; /* Ajustează originea transformării */
+
+        .product img {
+            width: 100%;
+            border-radius: 8px;
         }
-        .player-info {
+
+        .product h2 {
             margin-top: 10px;
-            text-align: center;
         }
-        .player-info p {
-            margin: 5px 0;
+
+        .product p {
+            margin: 10px 0;
         }
-        .player-info a {
-            color: #4CAF50;
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
             text-decoration: none;
+            border-radius: 4px;
         }
-        .player-info a:hover {
-            text-decoration: underline;
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
     </style>
 </head>
 <body>
-    <h1>Gallery Models for Designers</h1>
-    <div class="player-container">
-        <div class="player">
-            <iframe src="https://sephirothcoding.github.io/abby/" frameborder="0"></iframe>
-            <div class="player-info">
-                <p><a href="https://sephirothcoding.github.io/abby/" target="_blank">Abby</a></p>
-                <p>Preț: (...) xats</p>
+    <header>
+        <h1>Magazine Online pentru Modele de Website-uri</h1>
+    </header>
+
+    <main>
+        <section class="product-list">
+            <div class="product">
+                <img src="model1.jpg" alt="Model 1">
+                <h2>Model Website 1</h2>
+                <p>Descriere scurtă a modelului 1.</p>
+                <a href="https://link-catre-site-ul-live1.com" target="_blank" class="btn">Vezi Live</a>
             </div>
-        </div>
-        <div class="player">
-            <iframe src="https://sephirothcoding.github.io/Mixgallery/" frameborder="0"></iframe>
-            <div class="player-info">
-                <p><a href="https://sephirothcoding.github.io/Mixgallery/" target="_blank">Mixgallery</a></p>
-                <p>Preț: (...) xats</p>
+
+            <div class="product">
+                <img src="model2.jpg" alt="Model 2">
+                <h2>Model Website 2</h2>
+                <p>Descriere scurtă a modelului 2.</p>
+                <a href="https://link-catre-site-ul-live2.com" target="_blank" class="btn">Vezi Live</a>
             </div>
-        </div>
-        <div class="player">
-            <iframe src="https://sephirothcoding.github.io/new/" frameborder="0"></iframe>
-            <div class="player-info">
-                <p><a href="https://sephirothcoding.github.io/new/" target="_blank">New</a></p>
-                <p>Preț: (...) xats</p>
-            </div>
-        </div>
-        <div class="player">
-            <iframe src="https://sephirothcoding.github.io/2022seph/" frameborder="0"></iframe>
-            <div class="player-info">
-                <p><a href="https://sephirothcoding.github.io/2022seph/" target="_blank">2022 Seph</a></p>
-                <p>Preț: (...) xats</p>
-            </div>
-        </div>
-        <div class="player">
-            <iframe src="https://sephirothcoding.github.io/ziva/" frameborder="0"></iframe>
-            <div class="player-info">
-                <p><a href="https://sephirothcoding.github.io/ziva/" target="_blank">Ziva</a></p>
-                <p>Preț: (...) xats</p>
-            </div>
-        </div>
-        <div class="player">
-            <iframe src="https://sephirothcoding.github.io/aerith/" frameborder="0"></iframe>
-            <div class="player-info">
-                <p><a href="https://sephirothcoding.github.io/aerith/" target="_blank">Aerith</a></p>
-                <p>Preț: (...) xats</p>
-            </div>
-        </div>
-        <div class="player">
-            <iframe src="https://sephirothcoding.github.io/theme3/" frameborder="0"></iframe>
-            <div class="player-info">
-                <p><a href="https://sephirothcoding.github.io/theme3/" target="_blank">Theme 3</a></p>
-                <p>Preț: (...) xats</p>
-            </div>
-        </div>
-        <div class="player">
-            <iframe src="https://sephirothcoding.github.io/christine/" frameborder="0"></iframe>
-            <div class="player-info">
-                <p><a href="https://sephirothcoding.github.io/christine/" target="_blank">Christine</a></p>
-                <p>Preț: (...) xats</p>
-            </div>
-        </div>
-        <div class="player">
-            <iframe src="https://sephirothcoding.github.io/dany/" frameborder="0"></iframe>
-            <div class="player-info">
-                <p><a href="https://sephirothcoding.github.io/dany/" target="_blank">Dany</a></p>
-                <p>Preț: (...) xats</p>
-            </div>
-        </div>
-        <div class="player">
-            <iframe src="https://sephirothcoding.github.io/aura/" frameborder="0"></iframe>
-            <div class="player-info">
-                <p><a href="https://sephirothcoding.github.io/aura/" target="_blank">Aura</a></p>
-                <p>Preț: (...) xats</p>
-            </div>
-        </div>
-        <div class="player">
-            <iframe src="https://sephirothcoding.github.io/amar/" frameborder="0"></iframe>
-            <div class="player-info">
-                <p><a href="https://sephirothcoding.github.io/amar/" target="_blank">Amar</a></p>
-                <p>Preț: (...) xats</p>
-            </div>
-        </div>
-    </div>
+
+            <!-- Adaugă mai multe modele aici -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Magazin Online pentru Modele de Website-uri. Toate drepturile rezervate.</p>
+    </footer>
 </body>
 </html>
