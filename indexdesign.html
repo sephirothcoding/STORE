@@ -27,24 +27,21 @@
             padding: 20px;
         }
         .player {
-            width: 300px; /* Adjust width to fit two players per row */
-            height: 300px; /* Adjust height to fit two players per row */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            width: 300px; /* Dimensiunea redusă a fiecărui player */
+            height: 300px; /* Dimensiunea redusă a fiecărui player */
             border: 1px solid #ccc;
             background-color: #fff;
             padding: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             box-sizing: border-box;
+            overflow: hidden; /* Ascunde părțile care ies din dimensiune */
         }
         .player iframe {
             width: 100%;
             height: 100%;
-            transform: scale(0.5); /* Scale down the iframe content */
-            transform-origin: 0 0; /* Adjust the origin for proper scaling */
             border: none;
+            transform: scale(0.5); /* Micșorează iframe-ul pentru a se încadra în dimensiune */
+            transform-origin: 0 0; /* Ajustează originea transformării pentru a păstra aspectul corect */
         }
         .player-info {
             margin-top: 10px;
