@@ -27,8 +27,8 @@
             padding: 20px;
         }
         .player {
-            width: 600px;
-            height: 600px;
+            width: 300px; /* Adjust width to fit two players per row */
+            height: 300px; /* Adjust height to fit two players per row */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -37,10 +37,14 @@
             background-color: #fff;
             padding: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
         }
         .player iframe {
             width: 100%;
             height: 100%;
+            transform: scale(0.5); /* Scale down the iframe content */
+            transform-origin: 0 0; /* Adjust the origin for proper scaling */
+            border: none;
         }
         .player-info {
             margin-top: 10px;
