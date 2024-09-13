@@ -34,38 +34,37 @@
         }
 
         .product {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: calc(33.333% - 40px);
-            box-sizing: border-box;
+            width: 600px; /* Am crescut lățimea pentru a acomoda 2 site-uri pe rând */
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
-        .product img {
-            width: 100%;
+        .container {
+            width: calc(50% - 10px); /* Două site-uri pe rând */
+            box-sizing: border-box;
+            border: 1px solid #ddd;
             border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            height: 400px; /* Înălțimea dorită pentru container */
+        }
+
+        .container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
 
         .product h2 {
+            text-align: center;
             margin-top: 10px;
         }
 
-        .product p {
-            margin: 10px 0;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-        }
-
-        .btn:hover {
-            background-color: #0056b3;
+        .price {
+            text-align: center;
+            color: #007bff;
+            font-weight: bold;
         }
 
         footer {
@@ -87,20 +86,50 @@
     <main>
         <section class="product-list">
             <div class="product">
-                <img src="model1.jpg" alt="Model 1">
-                <h2>Model Website 1</h2>
-                <p>Descriere scurtă a modelului 1.</p>
-                <a href="https://link-catre-site-ul-live1.com" target="_blank" class="btn">Vezi Live</a>
+                <div class="container">
+                    <iframe src="https://sephirothcoding.github.io/lyra/" title="Model Website 1"></iframe>
+                </div>
+                <div class="container">
+                    <iframe src="https://example.com" title="Model Website 2"></iframe>
+                </div>
             </div>
-
             <div class="product">
-                <img src="model2.jpg" alt="Model 2">
-                <h2>Model Website 2</h2>
-                <p>Descriere scurtă a modelului 2.</p>
-                <a href="https://link-catre-site-ul-live2.com" target="_blank" class="btn">Vezi Live</a>
+                <div class="container">
+                    <iframe src="https://example.com" title="Model Website 3"></iframe>
+                </div>
+                <div class="container">
+                    <iframe src="https://example.com" title="Model Website 4"></iframe>
+                </div>
             </div>
-
-            <!-- Adaugă mai multe modele aici -->
+            <div class="product">
+                <div class="container">
+                    <iframe src="https://example.com" title="Model Website 5"></iframe>
+                </div>
+                <div class="container">
+                    <iframe src="https://example.com" title="Model Website 6"></iframe>
+                </div>
+            </div>
+            <div class="product">
+                <div class="container">
+                    <iframe src="https://example.com" title="Model Website 7"></iframe>
+                </div>
+                <div class="container">
+                    <iframe src="https://example.com" title="Model Website 8"></iframe>
+                </div>
+            </div>
+            <div class="product">
+                <div class="container">
+                    <iframe src="https://example.com" title="Model Website 9"></iframe>
+                </div>
+                <div class="container">
+                    <iframe src="https://example.com" title="Model Website 10"></iframe>
+                </div>
+            </div>
+            <div class="product">
+                <div class="container">
+                    <iframe src="https://example.com" title="Model Website 11"></iframe>
+                </div>
+            </div>
         </section>
     </main>
 
