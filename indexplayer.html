@@ -66,7 +66,7 @@
         }
 
         .player-large {
-            width: 1000px; /* Increased width */
+            width: 750px; /* Reduced width by 25% from 1000px */
             height: 600px; /* Height remains the same */
             margin: 10px auto; /* Centered */
             border: 1px solid #ddd;
@@ -76,6 +76,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative; /* For positioning the image overlay */
+        }
+
+        .player-large img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer; /* Indicate that the image is clickable */
         }
 
         .section-title {
@@ -85,6 +93,13 @@
             color: #87CEEB;
             text-shadow: 0 0 5px rgba(135, 206, 235, 0.5);
         }
+
+        .price {
+            text-align: center;
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: #333;
+        }
     </style>
 </head>
 <body>
@@ -93,7 +108,9 @@
     <div class="section-title">Radio Players</div>
 
     <div class="player-large">
-        <iframe src="https://sephirothcoding.github.io/player1/" title="Player 1" sandbox="allow-same-origin allow-scripts"></iframe>
+        <a href="https://sephirothcoding.github.io/player1/" target="_blank">
+            <img src="path/to/screenshot1.jpg" alt="Player 1 Screenshot"> <!-- Update path to your screenshot -->
+        </a>
     </div>
 
     <div class="container">
@@ -115,5 +132,11 @@
             <iframe src="https://sephirothcoding.github.io/player5/" title="Player 5"></iframe>
         </div>
     </div>
+
+    <div class="price">Player 1: 1000 xats</div>
+    <div class="price">Player 2: 2000 xats</div>
+    <div class="price">Player 3: 2000 xats</div>
+    <div class="price">Player 4: 1500 xats</div>
+    <div class="price">Player 5: 2500 xats</div>
 </body>
 </html>
