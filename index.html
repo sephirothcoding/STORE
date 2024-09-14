@@ -47,6 +47,9 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 255, 255, 0.7);
             position: relative;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Asigură că containerul ocupă întreaga înălțime a paginii */
         }
 
         .profile-cover {
@@ -154,8 +157,8 @@
 
         .footer-text {
             text-align: center;
-            margin-top: 20px;
-            color: #ffffff;
+            margin-top: auto; /* Asigură că textul de copyright este la baza paginii */
+            color: #87CEEB; /* Culoare albastră pentru text */
             font-size: 1rem;
             font-weight: bold;
         }
