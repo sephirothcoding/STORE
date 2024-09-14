@@ -1,250 +1,227 @@
 <!DOCTYPE html>
-<html>
+<html lang="ro">
 <head>
-  <title>Xatspace Store</title>
-  <!-- Copyright (c) 2024 Sephiroth (ID: 1538769249)-->
-<!--This edit version of the code is the intellectual property of Sephiroth, edited using a free source, you can not use my edit without my permission (ID: 1538769249). -->
-<!-- no one may copy or redistribute this version of the code without explicit permission from Sephiroth (ID: 1538769249). -->
-<!--For use in xat.com, please contact Sephiroth (ID: 1538769249) to purchase a copy.-->
-<!-- Removing credits wont remove my rights, you will still be reported if you steal it.	  -->        
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xatspace Store</title>
+    <style>
+        /* Stiluri generale */
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://xatimg.com/image/TPefpVGrGgf2.png') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            overflow-x: hidden; /* Permite scroll pe verticală */
+        }
 
-  <style>
-    body {
-      background-color: #111111;
-    }
+        h1 {
+            background: linear-gradient(135deg, #87CEEB, #87CEFA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 3em;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(135, 206, 235, 0.7); /* efect de glow */
+            text-align: center;
+            margin: 20px 0;
+            animation: textGlow 1.5s ease-in-out infinite;
+        }
 
-    .container {
-      display: flex;
-      justify-content: center;
-      margin-top: 50px;
-    }
+        @keyframes textGlow {
+            0% { text-shadow: 0 0 5px rgba(135, 206, 235, 0.5); }
+            50% { text-shadow: 0 0 15px rgba(135, 206, 235, 1); }
+            100% { text-shadow: 0 0 5px rgba(135, 206, 235, 0.5); }
+        }
 
-    .box {
-      width: 450px;
-      height: 400px;
-      margin: 10px;
-      background-color: white;
-      border-radius: 5px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
 
-    .box img {
-      max-width: 100%;
-      max-height: 100%;
-      cursor: pointer;
-    }
-  </style>
+        .box {
+            width: 450px;
+            height: 400px;
+            margin: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 255, 255, 0.7);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 255, 255, 1);
+        }
+
+        .box img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .box img:hover {
+            transform: scale(1.1);
+        }
+
+        .box h3 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .box p {
+            margin: 5px 0;
+            font-size: 1rem;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
-  
-  <h1 style="text-align: center;">Sephiroth's Store</h1>
+    <h1>Xatspace Store</h1>
 
-  <div class="container">
-       <div class="box">
-      <a href="https://sephirothcoding.github.io/lyra/" target="_blank">
-        <img src="https://xatimg.com/image/MrVxnogdsPLm.jpg" alt="Image 1">
-      </a>
-      <h3>Model 30</h3>
-      <p>3000 xats</p>
+    <div class="container">
+        <div class="box">
+            <img src="https://xatimg.com/image/MrVxnogdsPLm.jpg" alt="Image 1">
+            <h3>Model 30</h3>
+            <p>3000 xats</p>
+        </div>
+
+        <div class="box">
+            <img src="https://xatimg.com/image/placeholder.jpg" alt="Image 2">
+            <h3>Model 31</h3>
+            <p>3000 xats</p>
+        </div>
     </div>
 
-  <div class="box">
-      <a href="..........." target="_blank">
-        <img src=..jpg" alt="Image 2">
-      </a>
-      <h3>Model 31</h3>
-      <p> 3000 xats</p>
-    </div>
-     </div>
+    <div class="container">
+        <div class="box">
+            <img src="https://xatimg.com/image/z7oZczZEMoNw.jpg" alt="Image 3">
+            <h3>Model 29</h3>
+            <p>3000 xats</p>
+        </div>
 
-<div class="container">
-       <div class="box">
-      <a href="https://sephirothcoding.github.io/stars/" target="_blank">
-        <img src="https://xatimg.com/image/z7oZczZEMoNw.jpg" alt="Image 1">
-      </a>
-      <h3>Model 29</h3>
-      <p>3000 xats</p>
+        <div class="box">
+            <img src="https://xatimg.com/image/EhJHQU4k5FfQ.jpg" alt="Image 4">
+            <h3>Model 28</h3>
+            <p>3000 xats</p>
+        </div>
     </div>
 
-  <div class="box">
-      <a href="https://sephirothcoding.github.io/katarina/" target="_blank">
-        <img src="https://xatimg.com/image/EhJHQU4k5FfQ.jpg" alt="Image 2">
-      </a>
-      <h3>Model 28</h3>
-      <p>3000 xats</p>
-    </div>
-     </div>
-  
-  
-  <div class="container">
-       <div class="box">
-      <a href="https://sephirothcoding.github.io/hexagon/" target="_blank">
-        <img src="https://xatimg.com/image/0c9N2DFxlk1U.png" alt="Image 1">
-      </a>
-      <h3>Hexagon</h3>
-      <p>2000 xats</p>
+    <div class="container">
+        <div class="box">
+            <img src="https://xatimg.com/image/0c9N2DFxlk1U.png" alt="Image 5">
+            <h3>Hexagon</h3>
+            <p>2000 xats</p>
+        </div>
+
+        <div class="box">
+            <img src="https://xatimg.com/image/hNpANZ5AFaCS.png" alt="Image 6">
+            <h3>Model 2023 Gallery</h3>
+            <p>2000 xats</p>
+        </div>
     </div>
 
-  <div class="box">
-      <a href="https://sephirothcoding.github.io/svg/" target="_blank">
-        <img src="https://xatimg.com/image/hNpANZ5AFaCS.png" alt="Image 2">
-      </a>
-      <h3>Model 2023 Gallery</h3>
-      <p>2000 xats</p>
-    </div>
-     </div>
-    
-     <div class="container">
-    <div class="box">
-      <a href="https://sephirothcoding.github.io/estella2/" target="_blank">
-        <img src="https://xatimg.com/image/cFdlLBwWP2vd.png" alt="Image 1">
-      </a>
-      <h3>Carousel + Butterfly</h3>
-      <p>2000 xats</p>
-    </div>
-    
-    <div class="box">
-      <a href="https://sephirothcoding.github.io/carousel/" target="_blank">
-        <img src="https://xatimg.com/image/io9RfOBXe46O.png" alt="Image 2">
-      </a>
-      <h3>new Model Carousel</h3>
-      <p>2000 xats</p>
-    </div>
-  </div>
+    <div class="container">
+        <div class="box">
+            <img src="https://xatimg.com/image/cFdlLBwWP2vd.png" alt="Image 7">
+            <h3>Carousel + Butterfly</h3>
+            <p>2000 xats</p>
+        </div>
 
-
- 
-  
- <div class="container">
-    <div class="box">
-      <a href="https://sephirothcoding.github.io/amr/" target="_blank">
-        <img src="https://xatimg.com/image/p9VX61VPeETX.png" alt="Image 2">
-      </a>
-      <h3>new Model 15</h3>
-      <p>2000 xats</p>
-    </div>
- 
-
-    <div class="box">
-      <a href="https://sephirothcoding.github.io/flv/" target="_blank">
-        <img src="https://xatimg.com/image/yBo9ZsKu7ON3.png" alt="Image 2">
-      </a>
-      <h3>new Model 13</h3>
-      <p>2000 xats</p>
-    </div>
-  </div>
-  
-
-   <div class="container">
-    <div class="box">
-      <a href="https://sephirothcoding.github.io/tb/" target="_blank">
-        <img src="https://xatimg.com/image/n3dfzfPQZwYi.png" alt="Image 2">
-      </a>
-      <h3>Model 3</h3>
-      <p>2000 xats</p>
+        <div class="box">
+            <img src="https://xatimg.com/image/io9RfOBXe46O.png" alt="Image 8">
+            <h3>new Model Carousel</h3>
+            <p>2000 xats</p>
+        </div>
     </div>
 
+    <div class="container">
+        <div class="box">
+            <img src="https://xatimg.com/image/p9VX61VPeETX.png" alt="Image 9">
+            <h3>new Model 15</h3>
+            <p>2000 xats</p>
+        </div>
 
-    <div class="box">
-      <a href="https://sephirothcoding.github.io/poke/" target="_blank">
-        <img src="https://xatimg.com/image/Ju5KlcPBqHiE.png" alt="Image 2">
-      </a>
-      <h3>Poke Theme</h3>
-      <p>2000 xats</p>
-    </div>
-  </div>
-
-
-
-  <div class="container">
-    <div class="box">
-      <a href="https://sephirothcoding.github.io/theme11/" target="_blank">
-        <img src="https://xatimg.com/image/0vT9Ih3slN6q.png.png" alt="Image 2">
-      </a>
-      <h3></h3>Theme 11</h3>
-      <p>1500 xats</p>
+        <div class="box">
+            <img src="https://xatimg.com/image/yBo9ZsKu7ON3.png" alt="Image 10">
+            <h3>new Model 13</h3>
+            <p>2000 xats</p>
+        </div>
     </div>
 
+    <div class="container">
+        <div class="box">
+            <img src="https://xatimg.com/image/n3dfzfPQZwYi.png" alt="Image 11">
+            <h3>Model 3</h3>
+            <p>2000 xats</p>
+        </div>
 
-    <div class="box">
-      <a href="https://xat.me/briza" target="_blank">
-        <img src="https://xatimg.com/image/GXablz4q9Gkt.png" alt="Image 2">
-      </a>
-      <h3>Model B</h3>
-      <p>2000 xats</p>
-    </div>
-  </div>
-
-
-  <div class="container">
-    <div class="box">
-      <a href="https://zephyroscoding.github.io/farruca/" target="_blank">
-        <img src="https://xatimg.com/image/14CJc2u8zvnE.png" alt="Image 2">
-      </a>
-      <h3></h3>Model 1 </h3>
-      <p>2000 xats</p>
+        <div class="box">
+            <img src="https://xatimg.com/image/Ju5KlcPBqHiE.png" alt="Image 12">
+            <h3>Poke Theme</h3>
+            <p>2000 xats</p>
+        </div>
     </div>
 
+    <div class="container">
+        <div class="box">
+            <img src="https://xatimg.com/image/0vT9Ih3slN6q.png" alt="Image 13">
+            <h3>Theme 11</h3>
+            <p>1500 xats</p>
+        </div>
 
-    <div class="box">
-      <a href="https://zephyroscoding.github.io/theme6/" target="_blank">
-        <img src="https://xatimg.com/image/Qg8iJAmkWSfx.png" alt="Image 2">
-      </a>
-      <h3>Model 6</h3>
-      <p>1500 xats</p>
-    </div>
-  </div>
-
-
-  <div class="container">
-    <div class="box">
-      <a href="https://sephirothcoding.github.io/estella/" target="_blank">
-        <img src="https://xatimg.com/image/LYaAq99hXmWl.png" alt="Image 2">
-      </a>
-      <h3></h3>Model 6.1 </h3>
-      <p>2000 xats</p>
+        <div class="box">
+            <img src="https://xatimg.com/image/GXablz4q9Gkt.png" alt="Image 14">
+            <h3>Model B</h3>
+            <p>2000 xats</p>
+        </div>
     </div>
 
+    <div class="container">
+        <div class="box">
+            <img src="https://xatimg.com/image/14CJc2u8zvnE.png" alt="Image 15">
+            <h3>Model 1</h3>
+            <p>2000 xats</p>
+        </div>
 
-    <div class="box">
-      <a href="https://zephyroscoding.github.io/theme7/" target="_blank">
-        <img src="https://xatimg.com/image/F51gTgX04tD6.png" alt="Image 2">
-      </a>
-      <h3>Model 4</h3>
-      <p>2000 xats</p>
-    </div>
-  </div>
-
-
-  <div class="container">
-    <div class="box">
-      <a href="https://zephyroscoding.github.io/theme5/" target="_blank">
-        <img src="https://xatimg.com/image/5K6yTbhANAIo.png" alt="Image 2">
-      </a>
-      <h3></h3>Model 5 </h3>
-      <p>2000 xats</p>
+        <div class="box">
+            <img src="https://xatimg.com/image/Qg8iJAmkWSfx.png" alt="Image 16">
+            <h3>Model 6</h3>
+            <p>1500 xats</p>
+        </div>
     </div>
 
-    
-  </div>
+    <div class="container">
+        <div class="box">
+            <img src="https://xatimg.com/image/LYaAq99hXmWl.png" alt="Image 17">
+            <h3>Model 6.1</h3>
+            <p>2000 xats</p>
+        </div>
 
+        <div class="box">
+            <img src="https://xatimg.com/image/F51gTgX04tD6.png" alt="Image 18">
+            <h3>Model 4</h3>
+            <p>2000 xats</p>
+        </div>
+    </div>
 
-
-
- 
-
-   
-
-
- 
-
-  
-  
-
-  
+    <div class="container">
+        <div class="box">
+            <img src="https://xatimg.com/image/5K6yTbhANAIo.png" alt="Image 19">
+            <h3>Model 5</h3>
+            <p>2000 xats</p>
+        </div>
+    </div>
 </body>
 </html>
