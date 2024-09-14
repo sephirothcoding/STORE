@@ -39,10 +39,11 @@
         /* Container pentru playere */
         .player-container {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column; /* Aranjează playerele vertical */
+            align-items: center;
             gap: 20px;
-            justify-content: center;
             padding: 20px;
+            max-width: 100%; /* Asigură că containerul se extinde pe întreaga lățime a paginii */
         }
 
         .player {
@@ -112,6 +113,7 @@
                 <p>Preț: 1800 xats</p>
             </div>
         </div>
+        <!-- Adaugă mai multe playere aici dacă este necesar -->
     </div>
 </body>
 </html>
