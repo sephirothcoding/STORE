@@ -58,6 +58,16 @@
             border: none;
         }
 
+        .player-large {
+            width: 1000px; /* Increased width */
+            height: 600px; /* Increased height */
+            margin: 10px auto; /* Centered and margin to adjust positioning */
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 255, 255, 0.7);
+            border-radius: 10px;
+            overflow: hidden; /* Ensures that iframe does not overflow */
+        }
+
         .section-title {
             text-align: center;
             font-size: 2em;
@@ -72,27 +82,25 @@
 
     <div class="section-title">Radio Players</div>
 
-    <div class="container">
-        <div class="player">
-            <iframe src="https://sephirothcoding.github.io/player1/" title="Player 1" sandbox="allow-same-origin allow-scripts"></iframe>
-        </div>
+    <div class="player-large">
+        <iframe src="https://sephirothcoding.github.io/player1/" title="Player 1" sandbox="allow-same-origin allow-scripts"></iframe>
+    </div>
 
+    <div class="container">
         <div class="player">
             <iframe src="https://sephirothcoding.github.io/player2/" title="Player 2"></iframe>
         </div>
-    </div>
 
-    <div class="container">
         <div class="player">
             <iframe src="https://sephirothcoding.github.io/player3/" title="Player 3"></iframe>
         </div>
-
-        <div class="player">
-            <iframe src="https://sephirothcoding.github.io/player4/" title="Player 4"></iframe>
-        </div>
     </div>
 
     <div class="container">
+        <div class="player">
+            <iframe src="https://sephirothcoding.github.io/player4/" title="Player 4"></iframe>
+        </div>
+
         <div class="player">
             <iframe src="https://sephirothcoding.github.io/player5/" title="Player 5"></iframe>
         </div>
