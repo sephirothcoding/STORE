@@ -39,11 +39,12 @@
         /* Container pentru playere */
         .player-container {
             display: flex;
-            flex-direction: column; /* Aranjează playerele vertical */
-            align-items: center;
+            flex-wrap: wrap;
             gap: 20px;
+            justify-content: center;
             padding: 20px;
-            max-width: 100%; /* Asigură că containerul se extinde pe întreaga lățime a paginii */
+            margin: 0 auto;
+            max-width: 1200px; /* Lățimea maximă a containerului */
         }
 
         .player {
@@ -113,7 +114,34 @@
                 <p>Preț: 1800 xats</p>
             </div>
         </div>
-        <!-- Adaugă mai multe playere aici dacă este necesar -->
+        <div class="player">
+            <iframe src="https://sephirothcoding.github.io/playermodel1/" frameborder="0"></iframe>
+            <div class="player-info">
+                <p><a href="https://sephirothcoding.github.io/playermodel1/" target="_blank">Player 3</a></p>
+                <p>Preț: 2000 xats</p>
+            </div>
+        </div>
+        <div class="player">
+            <iframe src="https://sephirothcoding.github.io/playermodel1/" frameborder="0"></iframe>
+            <div class="player-info">
+                <p><a href="https://sephirothcoding.github.io/playermodel1/" target="_blank">Player 4</a></p>
+                <p>Preț: 2200 xats</p>
+            </div>
+        </div>
+        <div class="player">
+            <iframe src="https://sephirothcoding.github.io/playermodel1/" frameborder="0"></iframe>
+            <div class="player-info">
+                <p><a href="https://sephirothcoding.github.io/playermodel1/" target="_blank">Player 5</a></p>
+                <p>Preț: 2500 xats</p>
+            </div>
+        </div>
+        <div class="player">
+            <iframe src="https://sephirothcoding.github.io/playermodel1/" frameborder="0"></iframe>
+            <div class="player-info">
+                <p><a href="https://sephirothcoding.github.io/playermodel1/" target="_blank">Player 6</a></p>
+                <p>Preț: 3000 xats</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
