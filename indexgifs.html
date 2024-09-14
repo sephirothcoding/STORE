@@ -1,163 +1,149 @@
-<html data-lt-installed="true"><head></head><body>
-
-
-	
-<!-- Copyright (c) 2024 Sephiroth (ID: 1538769249)-->
-<!--This edit version of the code is the intellectual property of Sephiroth, edited using a free source, you can not use my edit without my permission (ID: 1538769249). -->
-<!-- no one may copy or redistribute this version of the code without explicit permission from Sephiroth (ID: 1538769249). -->
-<!--For use in xat.com, please contact Sephiroth (ID: 1538769249) to purchase a copy.-->
-<!-- Removing credits wont remove my rights, you will still be reported if you steal it.	  -->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<link rel="stylesheet" type="text/css" href="stylegifs.css">
-	<script>
-  function toggleCategory(categoryName) {
-    var category = document.getElementById(categoryName);
-    category.style.display === 'none' ? category.style.display = 'block' : category.style.display = 'none';
-  }
-</script>
-</head>	
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie GIF-uri</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://xatimg.com/image/TPefpVGrGgf2.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
 
+        h1 {
+            margin-top: 20px;
+            color: #87CEEB; /* Culoare sky blue */
+            text-shadow: 0 0 10px rgba(135, 206, 235, 0.7); /* Text glow efect skyblue */
+            font-size: 3em;
+            font-weight: bold;
+            background: linear-gradient(135deg, #87CEEB, #87CEFA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textGlow 1.5s ease-in-out infinite;
+        }
 
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px;
+        }
 
-      
-<!-- menu. -->
- 
-		  
-		  
-<!-- body . -->
+        .gallery-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid #ffffff;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 255, 255, 1);
+        }
 
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-  
+        .gallery-item img {
+            width: 100px;  /* Lățimea GIF */
+            height: 100px; /* Înălțimea GIF */
+            border-radius: 10px;
+            transition: opacity 0.5s ease;
+        }
 
+        .gallery-item img:hover {
+            opacity: 0.8;
+        }
 
-	
+        .price {
+            margin-top: 10px;
+            color: #1E90FF; /* Culoare sky blue pentru preț */
+            font-weight: bold;
+            font-size: 1.2em;
+            text-shadow: 0 0 5px rgba(30, 144, 255, 0.7);
+        }
 
-<div class="page-title"></div>
+        @keyframes textGlow {
+            0% { text-shadow: 0 0 5px rgba(135, 206, 235, 0.5); }
+            50% { text-shadow: 0 0 15px rgba(135, 206, 235, 1); }
+            100% { text-shadow: 0 0 5px rgba(135, 206, 235, 0.5); }
+        }
+    </style>
+</head>
+<body>
 
-  <!-- Category Gif 1 Photo 1 Name -->
-  <div class="category-title" onclick="toggleCategory('Gif 1 Photo 1 Name')">𝑮𝒊𝒇 𝟏 𝑷𝒉𝒐𝒕𝒐 𝟏 𝑵𝒂𝒎𝒆 - 𝑪𝒍𝒊𝒄𝒌 𝒕𝒐 𝑺𝒉𝒐𝒘/𝑯𝒊𝒅𝒆</div>
-  <div id="Gif 1 Photo 1 Name" class="gif-container" style="display: none;">
-<table cellpadding="0" cellspacing="0" width="100%"> 
- </table><table style="border:1px solid black;margin-left:auto;margin-right:auto;">
-	
+<h1>Galerie GIF-uri</h1>
 
- <tbody><tr>
-	 
- <td><div class="grid">    <div class="grid-item" data-itemid="1"><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>BT190</b></font> <img src=" .gif" style="font-size: 1rem;"> </div><div class="item-price">500 xats</div>      <div class="item-gradient"></div>      <h2 class="item-title"></h2>      <div class="item-quick-cart"><span class="qc-icon"></span></div>    </div></div></td>
- <td><div class="grid">    <div class="grid-item" data-itemid="1"><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>Bt188</b></font> <img src=" .gif" style="font-size: 1rem;"> </div><div class="item-price">500 xats</div>      <div class="item-gradient"></div>      <h2 class="item-title"></h2>      <div class="item-quick-cart"><span class="qc-icon"></span></div>    </div></div></td>
- <td><div class="grid">    <div class="grid-item" data-itemid="1"><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>Bt2</b></font> <img src=" .gif" style="font-size: 1rem;"> </div><div class="item-price">500 xats</div>      <div class="item-gradient"></div>      <h2 class="item-title"></h2>      <div class="item-quick-cart"><span class="qc-icon"></span></div>    </div></div></td>
- <td><div class="grid">    <div class="grid-item" data-itemid="1"><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>Bt7</b></font> <img src=" .gif" style="font-size: 1rem;"> </div><div class="item-price">500 xats</div>      <div class="item-gradient"></div>      <h2 class="item-title"></h2>      <div class="item-quick-cart"><span class="qc-icon"></span></div>    </div></div></td>
- <td><div class="grid">    <div class="grid-item" data-itemid="1"><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>Bt10</b></font> <img src=" .gif" style="font-size: 1rem;"> </div><div class="item-price">500 xats</div>      <div class="item-gradient"></div>      <h2 class="item-title"></h2>      <div class="item-quick-cart"><span class="qc-icon"></span></div>    </div></div></td>
- <td><div class="grid">    <div class="grid-item" data-itemid="1"><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>Bt12</b></font> <img src=" .gif" style="font-size: 1rem;"> </div><div class="item-price">500 xats</div>      <div class="item-gradient"></div>      <h2 class="item-title"></h2>      <div class="item-quick-cart"><span class="qc-icon"></span></div>    </div></div></td>
- <td><div class="grid">    <div class="grid-item" data-itemid="1"><div style="text-align: center; width: 100px; height: 120px; background-color:#C0E7F9; border: 3px solid rgb(255, 255, 255);"><font color="#111111"><b>Bt13</b></font> <img src=" .gif" style="font-size: 1rem;"> </div><div class="item-price">500 xats</div>      <div class="item-gradient"></div>      <h2 class="item-title"></h2>      <div class="item-quick-cart"><span class="qc-icon"></span></div>    </div></div></td>
- </tr>
-<tr>
-	
+<div id="gallery" class="gallery"></div>
 
-</tbody></table>
-	
-	 
-  </div>
-
-
-
-
-
-
-
-	    <!-- Category Gif 2 Photo 2 name ( couples)  -->
-  <div class="category-title" onclick="toggleCategory('Gif 2 Photo 2 name (couples)')">𝑮𝒊𝒇 𝟐 𝑷𝒉𝒐𝒕𝒐 𝟐 𝒏𝒂𝒎𝒆 (𝒄𝒐𝒖𝒑𝒍𝒆𝒔) - 𝑪𝒍𝒊𝒄𝒌 𝒕𝒐 𝑺𝒉𝒐𝒘/𝑯𝒊𝒅𝒆</div>
-  <div id="Gif 2 Photo 2 name (couples)" class="gif-container" style="display: none;">
- <table cellpadding="0" cellspacing="0" width="100%"> 
- </table><table style="border:1px solid black;margin-left:auto;margin-right:auto;">
- <tbody>  
-
-	 
-</tbody></table>
-  </div>
-
-
-
-
-
-
-	    <!-- Category Gif no Photo ( only name) -->
-  <div class="category-title" onclick="toggleCategory('Gif no Photo ( only name)')">𝑮𝒊𝒇 𝒏𝒐 𝑷𝒉𝒐𝒕𝒐 ( 𝒐𝒏𝒍𝒚 𝒏𝒂𝒎𝒆) - 𝑪𝒍𝒊𝒄𝒌 𝒕𝒐 𝑺𝒉𝒐𝒘/𝑯𝒊𝒅𝒆</div>
-  <div id="Gif no Photo ( only name)" class="gif-container" style="display: none;">
+<script>
+    // Funcție pentru a prelua lista de GIF-uri
+    async function fetchGifs() {
+        const repoOwner = 'sephirothcoding';  // Numele de utilizator GitHub
+        const repoName = 'text-galerie';      // Numele repository-ului
+        const gifFolder = 'gifs';             // Folderul cu GIF-uri din repository
+        const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${gifFolder}`;
         
-<table cellpadding="0" cellspacing="0" width="100%"> 
- </table><table style="border:1px solid black;margin-left:auto;margin-right:auto;">
- <tbody>
+        try {
+            const response = await fetch(apiUrl);
+            if (!response.ok) throw new Error('Network response was not ok');
+            const data = await response.json();
 
-</tbody></table>
-	  
-  </div>
+            // Filtrăm doar fișierele GIF
+            return data.filter(item => item.name.endsWith('.gif'))
+                       .map(file => file.name);
+        } catch (error) {
+            console.error('Failed to fetch GIFs:', error);
+            return [];
+        }
+    }
 
+    // Funcția pentru a încărca și afișa GIF-urile
+    async function loadGifs() {
+        const gifNames = await fetchGifs();
+        const gallery = document.getElementById('gallery');
+        gallery.innerHTML = ''; // Golim galeria
 
+        gifNames.forEach((gifName) => {
+            const gifItem = document.createElement('div');
+            gifItem.classList.add('gallery-item');
 
+            // Încarcă imaginea GIF
+            const img = document.createElement('img');
+            img.src = `https://raw.githubusercontent.com/sephirothcoding/text-galerie/main/gifs/${gifName}`;
+            img.alt = gifName;
 
+            // Adaugă prețul sub GIF
+            const price = document.createElement('div');
+            price.classList.add('price');
+            price.textContent = 'Price: 500 xats'; // Preț fix pentru toate GIF-urile
 
-	    <!-- Category Halloween -->
-  <div class="category-title" onclick="toggleCategory('Halloween')">𝑮𝒊𝒇 𝑯𝒂𝒍𝒍𝒐𝒘𝒆𝒆𝒏 - 𝑪𝒍𝒊𝒄𝒌 𝒕𝒐 𝑺𝒉𝒐𝒘/𝑯𝒊𝒅𝒆</div>
-  <div id="Halloween" class="gif-container" style="display: none;">
+            // Afișăm imaginea și prețul
+            gifItem.appendChild(img);
+            gifItem.appendChild(price);
+            gallery.appendChild(gifItem);
+        });
+    }
 
-							 
-<table cellpadding="0" cellspacing="0" width="100%"> 
- </table><table style="border:1px solid black;margin-left:auto;margin-right:auto;">
-   <tbody><tr>
-  
-    </tbody>
-   </table>
-  </div>
+    // Încarcă toate gif-urile la inițializare
+    loadGifs();
+</script>
 
+<!-- Copyright (c) 2024 Sephiroth (ID: 1538769249) -->
+<!-- This edit version of the code is the intellectual property of Sephiroth, edited using a free source, you can not use my edit without my permission (ID: 1538769249). -->
+<!-- No one may copy or redistribute this version of the code without explicit permission from Sephiroth (ID: 1538769249). -->
+<!-- For use in xat.com, please contact Sephiroth (ID: 1538769249) to purchase a copy. -->
+<!-- Removing credits won't remove my rights, you will still be reported if you steal it. -->
 
-
-
-
-	    <!-- Category Gif Christmas  -->
-  <div class="category-title" onclick="toggleCategory('Gif Christmas')">𝑮𝒊𝒇 𝑪𝒉𝒓𝒊𝒔𝒕𝒎𝒂𝒔 - 𝑪𝒍𝒊𝒄𝒌 𝒕𝒐 𝑺𝒉𝒐𝒘/𝑯𝒊𝒅𝒆</div>
-  <div id="Gif Christmas" class="gif-container" style="display: none;">
-
-	  
-<table cellpadding="0" cellspacing="0" width="100%"> 
- </table><table style="border:1px solid black;margin-left:auto;margin-right:auto;">
-   <tbody><tr>
-
- 
-    </tbody>
-   </table>
- 
-  </div>
-
-
-
-
-
-	    <!-- Category Blinks  -->
-  <div class="category-title" onclick="toggleCategory('Blinks ')">𝑩𝒍𝒊𝒏𝒌𝒔  - 𝑪𝒍𝒊𝒄𝒌 𝒕𝒐 𝑺𝒉𝒐𝒘/𝑯𝒊𝒅𝒆</div>
-  <div id="Blinks " class="gif-container" style="display: none;">
-
-
-<table cellpadding="0" cellspacing="0" width="100%"> 
- </table><table style="border:1px solid black;margin-left:auto;margin-right:auto;">
-
-<tbody>
-	<tr>
-	
-	   	   
-   </tbody></table>	
-  </div>
-   
- 
-	
-  
-  
-</body></html>
+</body>
+</html>
