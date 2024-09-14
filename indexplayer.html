@@ -50,22 +50,32 @@
             box-shadow: 0 4px 8px rgba(0, 255, 255, 0.7);
             border-radius: 10px;
             overflow: hidden; /* Ensures that iframe does not overflow */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .player iframe {
             width: 100%;
             height: 100%;
             border: none;
+            /* Adding these to avoid iframe overflow issues */
+            min-width: 100%;
+            min-height: 100%;
+            box-sizing: border-box;
         }
 
         .player-large {
             width: 1000px; /* Increased width */
-            height: 600px; /* Increased height */
-            margin: 10px auto; /* Centered and margin to adjust positioning */
+            height: 600px; /* Height remains the same */
+            margin: 10px auto; /* Centered */
             border: 1px solid #ddd;
             box-shadow: 0 4px 8px rgba(0, 255, 255, 0.7);
             border-radius: 10px;
             overflow: hidden; /* Ensures that iframe does not overflow */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .section-title {
@@ -83,7 +93,7 @@
     <div class="section-title">Radio Players</div>
 
     <div class="player-large">
-        <iframe src="https://sephirothcoding.github.io/player1/" title="Player 1"></iframe>
+        <iframe src="https://sephirothcoding.github.io/player1/" title="Player 1" sandbox="allow-same-origin allow-scripts"></iframe>
     </div>
 
     <div class="container">
