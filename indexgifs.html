@@ -87,10 +87,9 @@
 <div id="gallery" class="gallery"></div>
 
 <script>
-    // Funcție pentru a prelua lista de GIF-uri
     async function fetchGifs() {
         const repoOwner = 'sephirothcoding';  // Numele de utilizator GitHub
-        const repoName = 'text-galerie';      // Numele repository-ului
+        const repoName = 'STORE';            // Numele repository-ului
         const gifFolder = 'gifs';             // Folderul cu GIF-uri din repository
         const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${gifFolder}`;
         
@@ -108,7 +107,6 @@
         }
     }
 
-    // Funcția pentru a încărca și afișa GIF-urile
     async function loadGifs() {
         const gifNames = await fetchGifs();
         const gallery = document.getElementById('gallery');
@@ -135,15 +133,8 @@
         });
     }
 
-    // Încarcă toate gif-urile la inițializare
     loadGifs();
 </script>
-
-<!-- Copyright (c) 2024 Sephiroth (ID: 1538769249) -->
-<!-- This edit version of the code is the intellectual property of Sephiroth, edited using a free source, you can not use my edit without my permission (ID: 1538769249). -->
-<!-- No one may copy or redistribute this version of the code without explicit permission from Sephiroth (ID: 1538769249). -->
-<!-- For use in xat.com, please contact Sephiroth (ID: 1538769249) to purchase a copy. -->
-<!-- Removing credits won't remove my rights, you will still be reported if you steal it. -->
 
 </body>
 </html>
