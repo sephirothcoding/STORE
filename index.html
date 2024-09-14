@@ -6,21 +6,46 @@
     <title>Profile Page</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* CSS Styles */
+        /* Stiluri generale */
         body {
             margin: 0;
             padding: 0;
-            background-color: skyblue;
-            font-family: Arial, sans-serif;
+            background: url('https://xatimg.com/image/TPefpVGrGgf2.png') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
         }
 
+        /* Stiluri pentru titlu */
+        h1 {
+            margin: 0;
+            color: #87CEEB;
+            text-shadow: 0 0 10px rgba(135, 206, 235, 0.7); /* efect de glow */
+            font-size: 3em;
+            font-weight: bold;
+            background: linear-gradient(135deg, #87CEEB, #87CEFA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textGlow 1.5s ease-in-out infinite;
+        }
+
+        @keyframes textGlow {
+            0% { text-shadow: 0 0 5px rgba(135, 206, 235, 0.5); }
+            50% { text-shadow: 0 0 15px rgba(135, 206, 235, 1); }
+            100% { text-shadow: 0 0 5px rgba(135, 206, 235, 0.5); }
+        }
+
+        /* Container profil */
         .profile-container {
             max-width: 900px;
             margin: 50px auto;
             padding: 20px;
-            background-color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 255, 255, 0.7);
             position: relative;
         }
 
@@ -30,7 +55,7 @@
             background: url('https://xatimg.com/image/nQYSIXd7WHHO.jpg') no-repeat center center;
             background-size: cover;
             position: relative;
-            border-bottom: 5px solid #1a73e8;
+            border-bottom: 5px solid #87CEEB;
         }
 
         .avatar-container {
@@ -43,7 +68,7 @@
             border-radius: 50%;
             overflow: hidden;
             border: 5px solid #ffffff;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
         }
 
         .avatar {
@@ -58,10 +83,7 @@
         }
 
         .profile-details h1 {
-            margin: 0;
-            color: #1a73e8;
-            font-size: 2.5rem;
-            font-weight: bold;
+            color: #87CEEB; /* Albastru deschis */
         }
 
         .profile-details p {
@@ -81,7 +103,7 @@
             margin: 5px;
             text-decoration: none;
             color: #fff;
-            background-color: #1a73e8;
+            background-color: #87CEEB;
             border-radius: 5px;
             font-size: 1rem;
             font-weight: bold;
@@ -89,10 +111,11 @@
         }
 
         .profile-buttons a:hover {
-            background-color: #155ab8;
+            background-color: #00BFFF;
             transform: scale(1.05);
         }
 
+        /* Carduri informații */
         .info-cards {
             display: flex;
             justify-content: space-between;
@@ -100,23 +123,23 @@
         }
 
         .info-card {
-            background-color: #f0f4f8;
+            background-color: rgba(240, 244, 248, 0.9);
             border: 1px solid #ddd;
             border-radius: 8px;
             padding: 20px;
-            width: 23%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            box-shadow: 0 4px 8px rgba(0, 255, 255, 0.7);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .info-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 12px rgba(0, 255, 255, 1);
         }
 
         .info-card h3 {
             margin-top: 0;
-            color: #1a73e8;
+            color: #87CEEB;
             font-size: 1.5rem;
         }
 
