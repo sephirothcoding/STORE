@@ -65,6 +65,14 @@
             opacity: 0.8;
         }
 
+        .name {
+            margin-top: 5px;
+            color: #1E90FF; /* Culoare sky blue */
+            font-weight: bold;
+            font-size: 1.1em;
+            text-shadow: 0 0 5px rgba(30, 144, 255, 0.7);
+        }
+
         .price {
             margin-top: 10px;
             color: #1E90FF; /* Culoare sky blue pentru preț */
@@ -121,13 +129,19 @@
             img.src = `https://raw.githubusercontent.com/sephirothcoding/STORE/main/gifs/${gifName}`;
             img.alt = gifName;
 
+            // Afișează numele GIF-ului
+            const name = document.createElement('div');
+            name.classList.add('name');
+            name.textContent = gifName; // Numele fișierului GIF
+
             // Adaugă prețul sub GIF
             const price = document.createElement('div');
             price.classList.add('price');
             price.textContent = 'Price: 500 xats'; // Preț fix pentru toate GIF-urile
 
-            // Afișăm imaginea și prețul
+            // Afișăm imaginea, numele și prețul
             gifItem.appendChild(img);
+            gifItem.appendChild(name);
             gifItem.appendChild(price);
             gallery.appendChild(gifItem);
         });
