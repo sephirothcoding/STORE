@@ -106,15 +106,25 @@
             if (!response.ok) throw new Error('Network response was not ok');
             const data = await response.json();
 
-            // Filtrăm doar fișierele GIF și sortăm după SHA (pentru a aduce fișierele noi primele)
+            // Filtrăm doar fișierele GIF și le sortăm descrescător pe baza numărului din numele fișierului
             return data
                 .filter(item => item.name.endsWith('.gif'))
-                .sort((a, b) => b.sha.localeCompare(a.sha)) // Sortăm descrescător după SHA
+                .sort((a, b) => {
+                    const numA = extractNumber(a.name);
+                    const numB = extractNumber(b.name);
+                    return numB - numA; // Sortăm descrescător după număr
+                })
                 .map(file => file.name);
         } catch (error) {
             console.error('Failed to fetch GIFs:', error);
             return [];
         }
+    }
+
+    // Funcție pentru extragerea numărului din numele fișierului (ex: "BT 22" -> 22)
+    function extractNumber(fileName) {
+        const match = fileName.match(/\d+/);
+        return match ? parseInt(match[0], 10) : 0;
     }
 
     async function loadGifs() {
