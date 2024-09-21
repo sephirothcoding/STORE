@@ -34,6 +34,7 @@
     // Seph'ten (1538769249) doğrudan satın alınmadıkça hiçbir şekilde kullanılamaz, kopyalanamaz veya dağıtılamaz.
     // Kullanım, yalnızca xat.com ile sınırlıdır ve sahibin açık onayını gerektirir.
     // İzinsiz kullanım yasaktır ve yasal işlemlere tabidir. -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,6 +64,13 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: textGlow 1.5s ease-in-out infinite;
+        }
+
+        h2 {
+            color: #87CEEB; /* Culoare sky blue */
+            font-size: 2em;
+            text-align: center;
+            margin-top: 40px;
         }
 
         .gallery {
@@ -128,7 +136,11 @@
 
 <h1>Galerie GIF-uri</h1>
 
-<div id="gallery" class="gallery"></div>
+<h2>Blufftitler Gifs</h2>
+<div id="bt-gallery" class="gallery"></div>
+
+<h2>After Effects Gifs</h2>
+<div id="af-gallery" class="gallery"></div>
 
 <script>
     async function fetchGifs() {
@@ -142,14 +154,9 @@
             if (!response.ok) throw new Error('Network response was not ok');
             const data = await response.json();
 
-            // Filtrăm doar fișierele GIF și le sortăm descrescător pe baza numărului din numele fișierului
+            // Filtrăm doar fișierele GIF
             return data
                 .filter(item => item.name.endsWith('.gif'))
-                .sort((a, b) => {
-                    const numA = extractNumber(a.name);
-                    const numB = extractNumber(b.name);
-                    return numB - numA; // Sortăm descrescător după număr
-                })
                 .map(file => file.name);
         } catch (error) {
             console.error('Failed to fetch GIFs:', error);
@@ -157,18 +164,17 @@
         }
     }
 
-    // Funcție pentru extragerea numărului din numele fișierului (ex: "BT 22" -> 22)
-    function extractNumber(fileName) {
-        const match = fileName.match(/\d+/);
-        return match ? parseInt(match[0], 10) : 0;
+    function categorizeGifs(gifNames) {
+        const btGifs = gifNames.filter(name => name.startsWith('Bt'));
+        const afGifs = gifNames.filter(name => name.startsWith('Af'));
+        return { btGifs, afGifs };
     }
 
-    async function loadGifs() {
-        const gifNames = await fetchGifs();
-        const gallery = document.getElementById('gallery');
+    function createGallery(gifNames, galleryId, price, prefix) {
+        const gallery = document.getElementById(galleryId);
         gallery.innerHTML = ''; // Golim galeria
 
-        gifNames.forEach((gifName) => {
+        gifNames.forEach((gifName, index) => {
             const gifItem = document.createElement('div');
             gifItem.classList.add('gallery-item');
 
@@ -180,19 +186,27 @@
             // Afișează numele GIF-ului
             const name = document.createElement('div');
             name.classList.add('name');
-            name.textContent = gifName; // Numele fișierului GIF
+            name.textContent = `${prefix} (${index + 1})`;
 
             // Adaugă prețul sub GIF
-            const price = document.createElement('div');
-            price.classList.add('price');
-            price.textContent = 'Price: 500 xats'; // Preț fix pentru toate GIF-urile
+            const priceDiv = document.createElement('div');
+            priceDiv.classList.add('price');
+            priceDiv.textContent = `Price: ${price} xats`;
 
             // Afișăm imaginea, numele și prețul
             gifItem.appendChild(img);
             gifItem.appendChild(name);
-            gifItem.appendChild(price);
+            gifItem.appendChild(priceDiv);
             gallery.appendChild(gifItem);
         });
+    }
+
+    async function loadGifs() {
+        const gifNames = await fetchGifs();
+        const { btGifs, afGifs } = categorizeGifs(gifNames);
+
+        createGallery(btGifs, 'bt-gallery', 300, 'Bt');
+        createGallery(afGifs, 'af-gallery', 500, 'Af');
     }
 
     loadGifs();
@@ -200,3 +214,5 @@
 
 </body>
 </html>
+
+
