@@ -35,6 +35,7 @@
     // Kullanım, yalnızca xat.com ile sınırlıdır ve sahibin açık onayını gerektirir.
     // İzinsiz kullanım yasaktır ve yasal işlemlere tabidir. -->
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,8 +51,8 @@
             flex-direction: column;
             align-items: center;
             margin: 0;
-            height: 100vh;
-            overflow-y: scroll; /* Permite scroll pe verticală */
+            min-height: 100vh; /* Ajustare pentru a permite scroll */
+            overflow-y: auto; /* Permite scroll-ul pe verticală */
         }
 
         h1 {
@@ -214,5 +215,3 @@
 
 </body>
 </html>
-
-
